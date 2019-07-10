@@ -12,6 +12,7 @@ namespace SphereConvertionUtil
     {
         private static Dictionary<string, string> Houses = new Dictionary<string, string>();
         private static string file = "";
+        private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
         private static List<SphereSaveObj> SphereObjs = new List<SphereSaveObj>();
         private static ConsoleSpiner spin = new ConsoleSpiner();
@@ -19,7 +20,9 @@ namespace SphereConvertionUtil
 
         static void Main(string[] args)
         {
-            string credential_path = @"/Users/jmmiljours/google-api.json";
+            //pour Google Translate
+            string credential_path = @"google-api.json";
+
             System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credential_path);
             InitHouse();
             PhaseToObj();
@@ -44,9 +47,16 @@ namespace SphereConvertionUtil
         private static void PhaseToObj()
         {
             bool found = false;
-            Console.WriteLine("Spécifier le chemin complet vers le sphereworld 55i");
-            Console.Write("Chemin : \n");
-            file = @"/Users/jmmiljours/Downloads/sphereworld/sphereworld.scp"; //Console.ReadLine();
+            Console.WriteLine("Spécifier le chemin complet vers le sphereworld.scp de 55i");
+            Console.Write("Chemin : ");
+            file = Console.ReadLine();
+            dirpath = Path.GetDirectoryName(file);
+
+            if (true)
+            {
+                Console.WriteLine("Les dosier de base est : " + dirpath);
+            }
+
             Console.Write("Chargement ... ");
 
             int objnum = -1;
@@ -420,7 +430,7 @@ namespace SphereConvertionUtil
         public static void WriteTofile(List<SphereSaveObj> objs)
         {
             int objnum = 0;
-            string filePath = @"/Users/jmmiljours/Downloads/sphereworld/sphereworld.new";
+            string filePath = dirpath + @"/sphereworld.new";
             StringBuilder stringbuilder = new StringBuilder();
             Console.Write("Ecriture en cour...");
             stringbuilder.Append(Headers + Environment.NewLine);
