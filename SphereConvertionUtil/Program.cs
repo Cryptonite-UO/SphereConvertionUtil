@@ -10,6 +10,7 @@ namespace SphereConvertionUtil
 {
     class Program
     {
+
         private static Dictionary<string, string> Houses = new Dictionary<string, string>();
         private static string file = "";
         private static string dirpath = "";
@@ -24,6 +25,7 @@ namespace SphereConvertionUtil
             string credential_path = @"google-api.json";
 
             System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credential_path);
+
             InitHouse();
             PhaseToObj();
 
@@ -31,9 +33,6 @@ namespace SphereConvertionUtil
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
 
-            var a = SphereObjs.Where(id => id.Id == "i_multi_tower_wizard").ToList();
-
-            //Debug();
             ConvertNpcs();
             ConvertSpawn();
             ConvertHouse();
@@ -68,7 +67,7 @@ namespace SphereConvertionUtil
                     Headers += line + "\n";
                 }
 
-                //on spin a toutes les 1000 ligne
+                //on spin a toutes les 1 000 lignes
                 if (objnum % 10000 == 1)
                 {
                     spin.Turn();
@@ -112,7 +111,6 @@ namespace SphereConvertionUtil
                     {
                         var a = SphereObjs[objnum];
                         SphereObjs[objnum].Props.Add(prop);
-                        //SphereObjs[objnum].PropsKey.Add(new KeyValuePair<string, string>(prop[0],prop[1]));
                     }
                     catch (Exception ex)
                     {
@@ -289,10 +287,6 @@ namespace SphereConvertionUtil
                     }
                     string[] secure = { "EVENTS", "t_coowner" };
                     chest.Props.Add(secure);
-
-                    //A ajouter a debug
-                    //Console.WriteLine(chest.Id);
-                    //Thread.Sleep(500);
                 }
 
                 foreach (SphereSaveObj item in items)
@@ -309,43 +303,9 @@ namespace SphereConvertionUtil
                     }
                     string[] locked = { "EVENTS", "t_locked" };
                     item.Props.Add(locked);
-
-                    //A metre dans debug
-                    //Console.WriteLine(item.Id);
-                    //Thread.Sleep(500);
                 }
             }
             Console.WriteLine();
-        }
-
-        private static void Debug()
-        {
-            foreach (SphereSaveObj obj in SphereObjs.Where(o => o.IsHouse))
-            {
-                string[] serial = obj.Props.Where(s => s[0] == "SERIAL").FirstOrDefault();
-                var result = SphereObjs.Where(o => o.Props.Any(prop => prop[0] == "LINK" && prop[1] == serial[1])).ToList();
-            }
-
-
-            foreach (SphereSaveObj obj in SphereObjs.Where(o => o.IsHouse))
-            {
-                //foreach (string[] props in obj.Props.Where(s => s[0] == "SERIAL"))
-                foreach (string[] props in obj.Props.Where(s => s[0] == "SERIAL"))
-                {
-                    foreach (SphereSaveObj obj2 in SphereObjs)
-                    {
-                        foreach (string[] props2 in obj2.Props.Where(s => s[0] == "LINK"))
-                        {
-                            if (props[1] == props2[1])
-                            {
-                                Console.WriteLine(obj2.Id);
-                            }
-                        }
-                    }
-                }
-
-                Thread.Sleep(600);
-            }
         }
 
         private static void Traduction()
@@ -411,7 +371,6 @@ namespace SphereConvertionUtil
             string sourceLanguage = null; // automatically detected
             var client = Google.Cloud.Translation.V2.TranslationClient.Create();
             var response = client.TranslateText(text, targetLanguage, sourceLanguage);
-            //Thread.Sleep(100);
             return response.TranslatedText;
         }
 
