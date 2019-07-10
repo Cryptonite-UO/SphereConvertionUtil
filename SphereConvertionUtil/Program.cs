@@ -27,9 +27,9 @@ namespace SphereConvertionUtil
             InitHouse();
             PhaseToObj();
 
-            Console.WriteLine(string.Format("Nombre de maison: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
+            Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
-            Console.WriteLine(string.Format("Nombre d'objet : {0}", SphereObjs.Count()));
+            Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
 
             var a = SphereObjs.Where(id => id.Id == "i_multi_tower_wizard").ToList();
 
@@ -39,7 +39,7 @@ namespace SphereConvertionUtil
             ConvertHouse();
             WriteTofile(SphereObjs);
 
-            Console.WriteLine("Terminer ;)");
+            Console.WriteLine("Terminé ;)");
 
             Console.ReadLine();
         }
@@ -47,14 +47,14 @@ namespace SphereConvertionUtil
         private static void PhaseToObj()
         {
             bool found = false;
-            Console.WriteLine("Spécifier le chemin complet vers le sphereworld.scp de 55i");
+            Console.WriteLine("Spécifiez le chemin complet vers le sphereworld.scp de 55i");
             Console.Write("Chemin : ");
             file = Console.ReadLine();
             dirpath = Path.GetDirectoryName(file);
 
             if (true)
             {
-                Console.WriteLine("Les dosier de base est : " + dirpath);
+                Console.WriteLine("Le dossier de base est : " + dirpath);
             }
 
             Console.Write("Chargement ... ");
@@ -117,7 +117,7 @@ namespace SphereConvertionUtil
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex);
-                        Console.WriteLine("Ereure sur la ligne " + objnum);
+                        Console.WriteLine("Erreur sur la ligne " + objnum);
                         continue;
                     }
                 }
@@ -134,7 +134,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertNpcs()
         {
-            Console.Write("Corection des Npcs... ");
+            Console.Write("Correction des Npcs... ");
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDCHAR"))
             {
                 spin.Turn();
@@ -156,7 +156,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertSpawn()
         {
-            Console.Write("Corection des MORE Npcs,Deeds et Items... ");
+            Console.Write("Correction des MORE, Npcs, Deeds et Items... ");
             foreach (SphereSaveObj obj in SphereObjs)
             {
                 spin.Turn();
@@ -196,7 +196,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertHouse()
         {
-            Console.Write("Corection des Maisons... ");
+            Console.Write("Correction des Maisons... ");
             foreach (SphereSaveObj obj in SphereObjs.Where(h => h.IsHouse))
             {
                 spin.Turn();
@@ -357,12 +357,12 @@ namespace SphereConvertionUtil
                 File.Move(f.FullName, Path.ChangeExtension(f.FullName, ".org"));
                 file = f.FullName.Replace(".scp", ".org");
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Fichier en cour de traduction: {0}", file);
+                Console.WriteLine("Fichiers en cours de traduction: {0}", file);
                 Console.ForegroundColor = ConsoleColor.White;
                 PhaseSphaereScp();
                 //Thread.Sleep(60000);
             }
-            Console.WriteLine("Dosier Terminer");
+            Console.WriteLine("Dossier Terminé");
             Console.ReadLine();
         }
 
@@ -394,14 +394,14 @@ namespace SphereConvertionUtil
 
         public static void Write()
         {
-            Console.WriteLine("Ecriture du nouveau ficher en cour patienter ...");
+            Console.WriteLine("Écriture du nouveau fichier en cours, patienter ...");
 
             foreach (Ligne l in linesTowrite)
             {
                 WriteTofile(l);
             }
 
-            Console.WriteLine("Operation Terminer");
+            Console.WriteLine("Opération Terminée");
 
         }
 
@@ -432,7 +432,7 @@ namespace SphereConvertionUtil
             int objnum = 0;
             string filePath = dirpath + @"/sphereworld.new";
             StringBuilder stringbuilder = new StringBuilder();
-            Console.Write("Ecriture en cour...");
+            Console.Write("Écriture en cours...");
             stringbuilder.Append(Headers + Environment.NewLine);
             foreach (SphereSaveObj obj in objs)
             {
