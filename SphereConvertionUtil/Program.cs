@@ -26,7 +26,9 @@ namespace SphereConvertionUtil
 
             System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credential_path);
 
-            InitHouse();
+            Traduction(@"sphere_msgs.scp");
+
+            /*InitHouse();
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
@@ -36,7 +38,7 @@ namespace SphereConvertionUtil
             ConvertNpcs();
             ConvertSpawn();
             ConvertHouse();
-            WriteTofile(SphereObjs);
+            WriteTofile(SphereObjs);*/
 
             Console.WriteLine("Terminé ;)");
 
@@ -308,19 +310,32 @@ namespace SphereConvertionUtil
             Console.WriteLine();
         }
 
-        private static void Traduction()
+        private static void Traduction(string fileToTranslate = "")
         {
-            DirectoryInfo d = new DirectoryInfo(@"/Users/jmmiljours/sphere/scripts");//Assuming Test is your Folder
-            FileInfo[] Files = d.GetFiles("*.scp"); //Getting Text files
-            foreach (FileInfo f in Files)
+            if (fileToTranslate == "")
             {
-                File.Move(f.FullName, Path.ChangeExtension(f.FullName, ".org"));
-                file = f.FullName.Replace(".scp", ".org");
+                DirectoryInfo d = new DirectoryInfo(@"/Users/jmmiljours/sphere/scripts");
+                FileInfo[] Files = d.GetFiles("*.scp"); //Getting Text files
+                foreach (FileInfo f in Files)
+                {
+                    File.Move(f.FullName, Path.ChangeExtension(f.FullName, ".org"));
+                    file = f.FullName.Replace(".scp", ".org");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("Fichiers en cours de traduction: {0}", file);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    PhaseSphaereScp();
+                }
+            }
+            else
+            {
+                file = fileToTranslate;
+
+                File.Copy(file, file.Replace(".scp", ".org"), true);
+                file = file.Replace(".scp", ".org");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Fichiers en cours de traduction: {0}", file);
                 Console.ForegroundColor = ConsoleColor.White;
-                PhaseSphaereScp();
-                //Thread.Sleep(60000);
+                PhaseSphaereSphereMsg();
             }
             Console.WriteLine("Dossier Terminé");
             Console.ReadLine();
@@ -347,6 +362,38 @@ namespace SphereConvertionUtil
             }
         }
 
+        private static void PhaseSphaereSphereMsg()
+        {
+            var newline = "";
+            foreach (string line in File.ReadAllLines(file))
+            {
+                newline = line;
+
+                if (line.StartsWith(@"//", StringComparison.Ordinal))
+                {
+                    var linetoEdit = line.Split("\t");
+                    if (linetoEdit.Count() > 1)
+                    {
+                        if (!String.IsNullOrEmpty(linetoEdit[linetoEdit.Count() - 1]))
+                            {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            //Console.WriteLine(string.Format("Nom original: {0}", linetoEdit[linetoEdit.Count() - 1]));
+                            linetoEdit[linetoEdit.Count() - 1] = Traduire(linetoEdit[linetoEdit.Count() - 1]);
+                            newline = string.Join("\t", linetoEdit.Skip(0));
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine(newline);
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+                    }
+                }
+
+                AddLine(newline);
+            }
+            Write();
+        }
+
+
         public static void AddLine(string text, bool newline = true)
         {
             linesTowrite.Add(new Ligne(text, newline));
@@ -368,7 +415,7 @@ namespace SphereConvertionUtil
         public static string Traduire(string text)
         {
             string targetLanguage = "fr";
-            string sourceLanguage = null; // automatically detected
+            string sourceLanguage = "en";
             var client = Google.Cloud.Translation.V2.TranslationClient.Create();
             var response = client.TranslateText(text, targetLanguage, sourceLanguage);
             return response.TranslatedText;
@@ -378,11 +425,11 @@ namespace SphereConvertionUtil
         {
             if (line.IsNewLine)
             {
-                File.AppendAllText(file.Replace(".org", ".scp"), line.Text + Environment.NewLine);
+                File.AppendAllText(file.Replace(".org", ".scp"), line.Text + Environment.NewLine, Encoding.GetEncoding("iso-8859-1"));
             }
             else
             {
-                File.AppendAllText(file.Replace(".org", ".scp"), line.Text);
+                File.AppendAllText(file.Replace(".org", ".scp"), line.Text, Encoding.GetEncoding("iso-8859-1"));
             }
         }
 
