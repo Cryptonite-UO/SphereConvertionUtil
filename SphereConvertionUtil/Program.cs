@@ -47,6 +47,7 @@ namespace SphereConvertionUtil
 
             //SphereChars.scp TODO: lire les deux fichier dans la method 
             AskFilePath("spherechars.scp");
+            SphereObjs = new List<SphereSaveObj>();
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
