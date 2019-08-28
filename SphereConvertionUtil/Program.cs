@@ -31,6 +31,7 @@ namespace SphereConvertionUtil
 
             InitHouse();
             InitNpcs();
+            AskFilePath("sphereworld.scp");
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
@@ -40,19 +41,38 @@ namespace SphereConvertionUtil
             ConvertNpcs();
             ConvertSpawn();
             ConvertHouse();
-            WriteTofile(SphereObjs);
+            WriteTofile("/sphereworld_new.scp", SphereObjs);
 
-            Console.WriteLine("Terminé ;)");
+            Console.WriteLine("Terminé ;) pour sphereworld.scp");
+
+            //SphereChars.scp TODO: lire les deux fichier dans la method 
+            AskFilePath("spherechars.scp");
+            PhaseToObj();
+
+            Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
+
+            Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
+
+            ConvertNpcs();
+            ConvertSpawn();
+            WriteTofile("/spherechars_new.scp", SphereObjs);
+
+            Console.WriteLine("Terminé ;) pour spherechars.scp");
 
             Console.ReadLine();
         }
 
+        private static void AskFilePath(string fileName)
+        {
+            Console.WriteLine($"Spécifiez le chemin complet vers le {fileName} de 55i");
+            Console.Write("Chemin : ");
+            file = Console.ReadLine();
+        }
+
+        //file
         private static void PhaseToObj()
         {
             bool found = false;
-            Console.WriteLine("Spécifiez le chemin complet vers le sphereworld.scp de 55i");
-            Console.Write("Chemin : ");
-            file = Console.ReadLine();
             dirpath = Path.GetDirectoryName(file);
 
             if (true)
@@ -140,6 +160,13 @@ namespace SphereConvertionUtil
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDCHAR"))
             {
                 spin.Turn();
+                foreach (KeyValuePair<string, string> kvp in Npcs)
+                {
+                    if (obj.Id == kvp.Key && kvp.Value != "")
+                    {
+                        obj.Id = kvp.Value;
+                    }
+                }
                 if (obj.Id.ToLower().Contains("c_a_"))
                 {
                     obj.Id = Regex.Replace(obj.Id, "c_a_", "c_", RegexOptions.IgnoreCase);
@@ -443,10 +470,10 @@ namespace SphereConvertionUtil
             }
         }
 
-        public static void WriteTofile(List<SphereSaveObj> objs)
+        public static void WriteTofile(string fileName, List<SphereSaveObj> objs)
         {
             int objnum = 0;
-            string filePath = dirpath + @"/sphereworld.new";
+            string filePath = dirpath + fileName;
             StringBuilder stringbuilder = new StringBuilder();
             Console.Write("Écriture en cours...");
             stringbuilder.Append(Headers + Environment.NewLine);
