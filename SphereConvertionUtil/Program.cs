@@ -12,6 +12,7 @@ namespace SphereConvertionUtil
     {
 
         private static Dictionary<string, string> Houses = new Dictionary<string, string>();
+        private static Dictionary<string, string> Npcs = new Dictionary<string, string>();
         private static string file = "";
         private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
@@ -86,7 +87,7 @@ namespace SphereConvertionUtil
                     //creation d'object
                     var type = line.Remove(0, 1).Split(' ')[0];
                     var id = line.Remove(line.Length - 1, 1).Split(' ')[1];
-                    
+
                     var obj = new SphereSaveObj(type, id);
 
                     if (line.StartsWith("[WORLDITEM i_multi_", StringComparison.Ordinal))
@@ -98,7 +99,7 @@ namespace SphereConvertionUtil
                             {
                                 obj.IsHouse = true;
                             }
-                                    
+
                         }
                     }
                     SphereObjs.Add(obj);
@@ -161,9 +162,9 @@ namespace SphereConvertionUtil
             {
                 spin.Turn();
                 int i = 0;
-                foreach(string[] prop in obj.Props)
+                foreach (string[] prop in obj.Props)
                 {
-                    if(prop[0] == "MORE1" || prop[0] == "MORE2")
+                    if (prop[0] == "MORE1" || prop[0] == "MORE2")
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
                         {
@@ -375,7 +376,7 @@ namespace SphereConvertionUtil
                     if (linetoEdit.Count() > 1)
                     {
                         if (!String.IsNullOrEmpty(linetoEdit[linetoEdit.Count() - 1]))
-                            {
+                        {
                             Console.ForegroundColor = ConsoleColor.Red;
                             //Console.WriteLine(string.Format("Nom original: {0}", linetoEdit[linetoEdit.Count() - 1]));
                             linetoEdit[linetoEdit.Count() - 1] = Traduire(linetoEdit[linetoEdit.Count() - 1]);
@@ -558,6 +559,11 @@ namespace SphereConvertionUtil
 
             //040a2
             Houses.Add("i_multi_shop_marble_small", "m_small_marble_workshop");
+        }
+
+        private static void InitNpcs()
+        {
+            Npcs.Add("npc55i id", "npc56d id");
         }
     }
 
