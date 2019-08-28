@@ -27,9 +27,9 @@ namespace SphereConvertionUtil
 
             System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credential_path);
 
-            Traduction(@"sphere_msgs.scp");
+            //Traduction(@"sphere_msgs.scp");
 
-            /*InitHouse();
+            InitHouse();
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
@@ -39,7 +39,7 @@ namespace SphereConvertionUtil
             ConvertNpcs();
             ConvertSpawn();
             ConvertHouse();
-            WriteTofile(SphereObjs);*/
+            WriteTofile(SphereObjs);
 
             Console.WriteLine("Terminé ;)");
 
@@ -563,7 +563,17 @@ namespace SphereConvertionUtil
 
         private static void InitNpcs()
         {
-            Npcs.Add("npc55i id", "npc56d id");
+            Npcs.Add("c_black_bear", "c_bear_black");
+
+            Npcs.Add("c_wolf", "c_wolf_timber");
+
+            Npcs.Add("c_direwolf", "c_wolf_timber");
+
+            Npcs.Add("c_liche", "c_lich");
+
+            Npcs.Add("c_liche_lord", "c_lich_lord");
+
+            Npcs.Add("c_grim_reaper", "c_phantom");
         }
     }
 
