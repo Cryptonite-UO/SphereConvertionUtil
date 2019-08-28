@@ -30,6 +30,7 @@ namespace SphereConvertionUtil
             //Traduction(@"sphere_msgs.scp");
 
             InitHouse();
+            InitNpcs();
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
