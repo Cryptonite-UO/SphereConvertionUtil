@@ -174,6 +174,14 @@ namespace SphereConvertionUtil
                             }
                         }
 
+                        foreach (KeyValuePair<string, string> kvp in Npcs)
+                        {
+                            if (prop[1].Contains(kvp.Key) && kvp.Value != "")
+                            {
+                                obj.Props[i][1] = obj.Props[i][1].Replace(kvp.Key, kvp.Value);
+                            }
+                        }
+
                         if (prop[1].ToLower().Contains("c_a_"))
                         {
                             obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_a_", "c_", RegexOptions.IgnoreCase);
