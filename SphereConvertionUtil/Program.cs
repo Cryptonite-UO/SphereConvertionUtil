@@ -600,15 +600,15 @@ namespace SphereConvertionUtil
 
         private static void InitNpcs()
         {
-            Npcs.Add("c_black_bear", "c_bear_black");
+            Npcs.Add("c_a_black_bear", "c_bear_black");
 
             Npcs.Add("c_wolf", "c_wolf_timber");
 
-            Npcs.Add("c_direwolf", "c_wolf_timber");
+            Npcs.Add("c_a_direwolf", "c_wolf_timber");
 
             Npcs.Add("c_liche", "c_lich");
 
-            Npcs.Add("c_liche_lord", "c_lich_lord");
+            Npcs.Add("c_m_liche_lord", "c_lich_lord");
 
             Npcs.Add("c_grim_reaper", "c_phantom");
         }
