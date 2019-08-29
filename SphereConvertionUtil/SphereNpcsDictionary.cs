@@ -46,7 +46,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_ettin_w_axe", "c_ettin");//a checker w_axe pas dans 56d
 
-            Npcs.Add("c_ophidian_archmage", "c_ophidian_archmage");
+            Npcs.Add("c_ophidian_mage", "c_ophidian_archmage");
 
             Npcs.Add("c_sea_monster", "");//pas trouver dans 56d
 
@@ -81,6 +81,10 @@ namespace SphereConvertionUtil
             Npcs.Add("c_m_elem_poison", "c_elemental_poison");
 
             Npcs.Add("c_elem_earth", "c_elemental_earth");
+
+            Npcs.Add("c_h_WARRIOR_F", "c_savage_warrior_female");
+
+            Npcs.Add("c_h_WARRIOR", "c_savage_warrior_male");
 
             return Npcs;
         }
