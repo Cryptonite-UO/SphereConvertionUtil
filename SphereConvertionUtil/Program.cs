@@ -11,9 +11,9 @@ namespace SphereConvertionUtil
     class Program
     {
 
-        private static Dictionary<string, string> Houses = new Dictionary<string, string>();
-        private static Dictionary<string, string> Npcs = new Dictionary<string, string>();
-        private static Dictionary<string, string> Items = new Dictionary<string, string>();
+        private static Dictionary<string, string> Houses = SphereHousesDictionary.Init();
+        private static Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
+        private static Dictionary<string, string> Items = SphereItemsDictionary.Init();
         private static string file = "";
         private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
@@ -30,9 +30,6 @@ namespace SphereConvertionUtil
 
             //Traduction(@"sphere_msgs.scp");
 
-            InitHouse();
-            InitNpcs();
-            InitItems();
             AskFilePath("sphereworld.scp");
             PhaseToObj();
 
@@ -160,7 +157,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertItems()
         {
-            Console.Write("Correction des ID Items... ");
+            Console.Write("Correction des ID Items... \n");
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
             {
                 foreach (KeyValuePair<string, string> kvp in Items)
@@ -531,180 +528,6 @@ namespace SphereConvertionUtil
             File.WriteAllText(filePath, stringbuilder.ToString());
             Console.WriteLine();
         }
-
-        private static void InitHouse()
-        {
-            Houses.Add("i_terrain_10x16", "");
-
-            Houses.Add("i_terrain_8x16", "");
-
-            Houses.Add("i_terrain_16x12", "");
-
-            Houses.Add("i_terrain_24x17", "");
-
-            Houses.Add("i_terrain_20x20", "");
-
-            Houses.Add("i_terrain_31x31", "");
-
-            Houses.Add("i_terrain_24x24", "");
-
-            Houses.Add("i_terrain_11x11", "");
-
-            Houses.Add("i_terrain_14x14", "");
-
-            Houses.Add("i_terrain_7x7", "");
-
-            //04064
-            Houses.Add("i_multi_house_stone_plaster_small", "m_stone_and_plaster_house");
-
-            //04066
-            Houses.Add("i_multi_house_stone_small", "m_field_stone_house");
-
-            //04068
-            Houses.Add("i_multi_house_stone_brick_small", "m_small_brick_house");
-
-            //0406a
-            Houses.Add("i_multi_house_stone_wood_small", "m_wooden_house");
-
-            //0406c
-            Houses.Add("i_multi_house_wood_plaster_small", "m_wood_and_plaster_house");
-
-            //0406e
-            Houses.Add("i_multi_house_wood_thatched_small", "m_thatched_roof_cottage");
-
-            //04070
-            Houses.Add("i_multi_tent_blue", "");
-
-            //04072
-            Houses.Add("i_multi_tent_green", "");
-
-            //04074
-            Houses.Add("i_multi_house_3room", "m_brick_house");
-
-            //04076
-            Houses.Add("i_multi_house_wood_plaster_2story", "m_two_story_wood_and_plaster_house");
-
-            //04078
-            Houses.Add("i_multi_house_stone_plaster_2story", "m_two_story_stone_and_plaster_house");
-
-            //0407a
-            Houses.Add("i_multi_tower", "m_tower");
-
-            //0407c
-            Houses.Add("i_multi_keep", "m_small_stone_keep");
-
-            //0407e
-            Houses.Add("i_multi_castle", "m_castle");
-
-            //04087
-            Houses.Add("i_multi_shop_blacksmithy_large_2", "m_large_house_with_patio");
-
-            //0408c
-            Houses.Add("i_multi_shop_blacksmithy_large", "m_large_house_with_patio");
-
-            //04096
-            Houses.Add("i_multi_house_patio_marble", "m_marble_house_with_patio");
-
-            //04098
-            Houses.Add("i_multi_tower_wizard", "m_small_stone_tower");
-
-            //0409a
-            Houses.Add("i_multi_cabin_log_2story", "m_two_story_log_cabin");
-
-            //0409c
-            Houses.Add("i_multi_house_patio_sand", "m_sandstone_house_with_patio");
-
-            //0409e
-            Houses.Add("i_multi_villa_2story", "m_two_story_villa");
-
-            //040a0
-            Houses.Add("i_multi_shop_stone_small", "m_small_stone_workshop");
-
-            //040a2
-            Houses.Add("i_multi_shop_marble_small", "m_small_marble_workshop");
-        }
-
-        private static void InitNpcs()
-        {
-            //"ID55I, ID556D"
-            Npcs.Add("c_a_black_bear", "c_bear_black");
-
-            Npcs.Add("c_m_bear", "c_bear_brown");
-
-            Npcs.Add("c_a_wolf_gray", "c_wolf_grey");
-
-            Npcs.Add("c_wolf", "c_wolf_timber");
-
-            Npcs.Add("c_a_direwolf", "c_wolf_timber");
-
-            Npcs.Add("c_liche", "c_lich");
-
-            Npcs.Add("c_m_liche_lord", "c_lich_lord");
-
-            Npcs.Add("c_grim_reaper", "c_phantom");
-
-            Npcs.Add("c_goblin", "c_goblin_gray");
-
-            Npcs.Add("c_goblin_mage", "c_goblin_gray_mage");
-
-            Npcs.Add("c_m_stoneharpy", "c_harpystone");
-
-            Npcs.Add("c_m_goblin", "c_goblin_gray");
-
-            Npcs.Add("c_m_goblin_mage", "c_goblin_gray_mage");
-
-            Npcs.Add("c_m_lava_serpent", "c_serpent_lava");
-
-            Npcs.Add("c_m_silver_serpent", "c_serpent_silver");
-
-            Npcs.Add("c_m_ice_serpent", "c_serpent_ice");
-
-            Npcs.Add("c_m_ettin_w_axe", "c_ettin");//a checker w_axe pas dans 56d
-
-            Npcs.Add("c_ettin_w_axe", "c_ettin");//a checker w_axe pas dans 56d
-
-            Npcs.Add("c_ophidian_archmage", "c_ophidian_archmage");
-
-            Npcs.Add("c_sea_monster", "");//pas trouver dans 56d
-
-            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
-
-            Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant
-
-            Npcs.Add("c_m_balron", "c_demon_balron");
-
-            Npcs.Add("c_m_icefiend", "c_demon_ice");
-
-            Npcs.Add("c_dragon_small_red", "c_dragon_red");
-
-            Npcs.Add("c_dragon_small_black", "c_dragon_black");
-
-            Npcs.Add("c_h_sprte_mage", "c_sprite_mage");
-
-            Npcs.Add("c_elem_water", "c_elemental_water");
-
-            Npcs.Add("c_m_elem_snow", "c_elemental_snow");
-
-            Npcs.Add("c_elem_air", "c_elemental_air");
-
-            Npcs.Add("c_m_elem_blood", "c_elemental_blood");
-
-            Npcs.Add("c_m_elem_acid", "c_elemental_acid");
-
-            Npcs.Add("c_elem_fire", "c_elemental_fire");
-
-            Npcs.Add("c_m_elem_ice", "c_elemental_ice");
-
-            Npcs.Add("c_m_elem_poison", "c_elemental_poison");
-
-            Npcs.Add("c_elem_earth", "c_elemental_earth");
-        }
-
-        private static void InitItems()
-        {
-            Items.Add("55I", "56D");
-        }
-
     }
 
 }
