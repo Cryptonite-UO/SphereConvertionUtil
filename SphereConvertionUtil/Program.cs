@@ -664,7 +664,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_elem_water", "c_elemental_water");
 
-            Npcs.Add("c_elem_snow", "c_elemental_snow");
+            Npcs.Add("c_m_elem_snow", "c_elemental_snow");
 
             Npcs.Add("c_elem_air", "c_elemental_air");
 
