@@ -30,7 +30,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_goblin_mage", "c_goblin_gray_mage");
 
-            Npcs.Add("c_m_stoneharpy", "c_harpystone");
+            Npcs.Add("c_m_stoneharpy", "c_harpy_stone");
 
             Npcs.Add("c_m_goblin", "c_goblin_gray");
 
