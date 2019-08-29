@@ -668,7 +668,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_elem_air", "c_elemental_air");
 
-            Npcs.Add("c_elem_blood", "c_elemental_blood");
+            Npcs.Add("c_m_elem_blood", "c_elemental_blood");
 
             Npcs.Add("c_m_elem_acid", "c_elemental_acid");
 
