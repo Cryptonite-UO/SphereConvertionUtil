@@ -610,6 +610,8 @@ namespace SphereConvertionUtil
             //"ID55I, ID556D"
             Npcs.Add("c_a_black_bear", "c_bear_black");
 
+            Npcs.Add("c_m_bear", "c_bear_brown");
+
             Npcs.Add("c_a_wolf_gray", "c_wolf_grey");
 
             Npcs.Add("c_wolf", "c_wolf_timber");
@@ -673,6 +675,8 @@ namespace SphereConvertionUtil
             Npcs.Add("c_elem_fire", "c_elemental_fire");
 
             Npcs.Add("c_elem_ice", "c_elemental_ice");
+
+            Npcs.Add("c_m_elem_poison", "c_elemental_poison");
 
             Npcs.Add("c_elem_earth", "c_elemental_earth");
         }
