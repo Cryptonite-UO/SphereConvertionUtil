@@ -13,6 +13,7 @@ namespace SphereConvertionUtil
 
         private static Dictionary<string, string> Houses = new Dictionary<string, string>();
         private static Dictionary<string, string> Npcs = new Dictionary<string, string>();
+        private static Dictionary<string, string> Items = new Dictionary<string, string>();
         private static string file = "";
         private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
@@ -31,6 +32,7 @@ namespace SphereConvertionUtil
 
             InitHouse();
             InitNpcs();
+            InitItems();
             AskFilePath("sphereworld.scp");
             PhaseToObj();
 
@@ -169,6 +171,14 @@ namespace SphereConvertionUtil
                         obj.EditedId = true;
                     }
                 }
+                foreach (KeyValuePair<string, string> kvp in Items)
+                {
+                    if (obj.Id == kvp.Key && kvp.Value != "")
+                    {
+                        obj.Id = kvp.Value;
+                    }
+                }
+
                 if (!obj.EditedId)
                 {
                     if (obj.Id.ToLower().Contains("c_a_"))
@@ -680,6 +690,12 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_elem_earth", "c_elemental_earth");
         }
+
+        private static void InitItems()
+        {
+            Items.Add("55I", "56D");
+        }
+
     }
 
 }
