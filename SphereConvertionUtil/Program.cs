@@ -162,7 +162,7 @@ namespace SphereConvertionUtil
             {
                 foreach (KeyValuePair<string, string> kvp in Items)
                 {
-                    if (obj.Id == kvp.Key && kvp.Value != "")
+                    if (obj.Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                     {
                         obj.Id = kvp.Value;
                     }
@@ -225,12 +225,13 @@ namespace SphereConvertionUtil
 
                         foreach (KeyValuePair<string, string> kvp in Npcs)
                         {
-                            if (prop[1].ToLower().Contains(kvp.Key.ToLower()) && kvp.Value != "")
+                            if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
-                                obj.Props[i][1] = obj.Props[i][1].Replace(kvp.Key, kvp.Value);
+                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
                                 obj.EditedMore = true;
                             }
                         }
+
                         if (!obj.EditedMore)
                         {
                             if (prop[1].ToLower().Contains("c_a_"))
