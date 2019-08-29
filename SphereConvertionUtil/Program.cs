@@ -39,7 +39,7 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-
+            ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
             ConvertHouse();
@@ -56,6 +56,7 @@ namespace SphereConvertionUtil
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
 
+            ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
             WriteTofile("/spherechars_new.scp", SphereObjs);
@@ -157,9 +158,24 @@ namespace SphereConvertionUtil
             }
         }
 
+        private static void ConvertItems()
+        {
+            Console.Write("Correction des ID Items... ");
+            foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
+            {
+                foreach (KeyValuePair<string, string> kvp in Items)
+                {
+                    if (obj.Id == kvp.Key && kvp.Value != "")
+                    {
+                        obj.Id = kvp.Value;
+                    }
+                }
+            }
+        }
+
         private static void ConvertNpcs()
         {
-            Console.Write("Correction des Npcs... ");
+            Console.Write("Correction des ID Npcs... ");
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDCHAR"))
             {
                 spin.Turn();
@@ -169,13 +185,6 @@ namespace SphereConvertionUtil
                     {
                         obj.Id = kvp.Value;
                         obj.EditedId = true;
-                    }
-                }
-                foreach (KeyValuePair<string, string> kvp in Items)
-                {
-                    if (obj.Id == kvp.Key && kvp.Value != "")
-                    {
-                        obj.Id = kvp.Value;
                     }
                 }
 
