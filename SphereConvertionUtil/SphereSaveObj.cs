@@ -19,6 +19,18 @@ namespace SphereConvertionUtil
             set;
         }
 
+        public bool EditedId
+        {
+            get;
+            set;
+        }
+
+        public bool EditedMore
+        {
+            get;
+            set;
+        }
+
         public string Type
         {
             get;

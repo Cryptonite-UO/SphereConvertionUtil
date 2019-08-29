@@ -166,19 +166,23 @@ namespace SphereConvertionUtil
                     if (obj.Id == kvp.Key && kvp.Value != "")
                     {
                         obj.Id = kvp.Value;
+                        obj.EditedId = true;
                     }
                 }
-                if (obj.Id.ToLower().Contains("c_a_"))
+                if (!obj.EditedId)
                 {
-                    obj.Id = Regex.Replace(obj.Id, "c_a_", "c_", RegexOptions.IgnoreCase);
-                }
-                if (obj.Id.ToLower().Contains("c_h_"))
-                {
-                    obj.Id = Regex.Replace(obj.Id, "c_h_", "c_", RegexOptions.IgnoreCase);
-                }
-                if (obj.Id.ToLower().Contains("c_m_"))
-                {
-                    obj.Id = Regex.Replace(obj.Id, "c_m_", "c_", RegexOptions.IgnoreCase);
+                    if (obj.Id.ToLower().Contains("c_a_"))
+                    {
+                        obj.Id = Regex.Replace(obj.Id, "c_a_", "c_", RegexOptions.IgnoreCase);
+                    }
+                    if (obj.Id.ToLower().Contains("c_h_"))
+                    {
+                        obj.Id = Regex.Replace(obj.Id, "c_h_", "c_", RegexOptions.IgnoreCase);
+                    }
+                    if (obj.Id.ToLower().Contains("c_m_"))
+                    {
+                        obj.Id = Regex.Replace(obj.Id, "c_m_", "c_", RegexOptions.IgnoreCase);
+                    }
                 }
             }
             Console.WriteLine();
@@ -208,22 +212,25 @@ namespace SphereConvertionUtil
                             if (prop[1].Contains(kvp.Key) && kvp.Value != "")
                             {
                                 obj.Props[i][1] = obj.Props[i][1].Replace(kvp.Key, kvp.Value);
+                                obj.EditedMore = true;
                             }
                         }
-
-                        if (prop[1].ToLower().Contains("c_a_"))
+                        if (!obj.EditedMore)
                         {
-                            obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_a_", "c_", RegexOptions.IgnoreCase);
-                        }
+                            if (prop[1].ToLower().Contains("c_a_"))
+                            {
+                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_a_", "c_", RegexOptions.IgnoreCase);
+                            }
 
-                        if (prop[1].ToLower().Contains("c_h_"))
-                        {
-                            obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_h_", "c_", RegexOptions.IgnoreCase);
-                        }
+                            if (prop[1].ToLower().Contains("c_h_"))
+                            {
+                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_h_", "c_", RegexOptions.IgnoreCase);
+                            }
 
-                        if (prop[1].ToLower().Contains("c_m_"))
-                        {
-                            obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_m_", "c_", RegexOptions.IgnoreCase);
+                            if (prop[1].ToLower().Contains("c_m_"))
+                            {
+                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_m_", "c_", RegexOptions.IgnoreCase);
+                            }
                         }
                     }
                     i++;
@@ -637,9 +644,9 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_sea_monster", "");//pas trouver dans 56d
 
-            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon -> conflit avec la fonction c_m => c_
+            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
 
-            Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant -> conflit avec la fonction c_m => c_
+            Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant
 
             Npcs.Add("c_m_balron", "c_demon_balron");
 
@@ -650,6 +657,8 @@ namespace SphereConvertionUtil
             Npcs.Add("c_m_dragon_small_black", "c_dragon_black");
 
             Npcs.Add("c_h_sprte_mage", "c_sprite_mage");
+
+            Npcs.Add("c_elem_water", "c_elemental_water");
         }
     }
 
