@@ -600,7 +600,10 @@ namespace SphereConvertionUtil
 
         private static void InitNpcs()
         {
+            //"ID55I, ID556D"
             Npcs.Add("c_a_black_bear", "c_bear_black");
+
+            Npcs.Add("c_a_wolf_gray", "c_wolf_grey");
 
             Npcs.Add("c_wolf", "c_wolf_timber");
 
@@ -611,6 +614,42 @@ namespace SphereConvertionUtil
             Npcs.Add("c_m_liche_lord", "c_lich_lord");
 
             Npcs.Add("c_grim_reaper", "c_phantom");
+
+            Npcs.Add("c_goblin", "c_goblin_gray");
+
+            Npcs.Add("c_goblin_mage", "c_goblin_gray_mage");
+
+            Npcs.Add("c_m_stoneharpy", "c_harpystone");
+
+            Npcs.Add("c_m_goblin", "c_goblin_gray");
+
+            Npcs.Add("c_m_goblin_mage", "c_goblin_gray_mage");
+
+            Npcs.Add("c_m_lava_serpent", "c_serpent_lava");
+
+            Npcs.Add("c_m_silver_serpent", "c_serpent_silver");
+
+            Npcs.Add("c_m_ice_serpent", "c_serpent_ice");
+
+            Npcs.Add("c_m_ettin_w_axe", "c_ettin");//a checker w_axe pas dans 56d
+
+            Npcs.Add("c_m_ophidian_archmage", "c_ophidian_archmage");
+
+            Npcs.Add("c_sea_monster", "");//pas trouver dans 56d
+
+            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon -> conflit avec la fonction c_m => c_
+
+            Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant -> conflit avec la fonction c_m => c_
+
+            Npcs.Add("c_m_balron", "c_demon_balron");
+
+            Npcs.Add("c_m_icefiend", "c_demon_ice");
+
+            Npcs.Add("c_m_dragon_small_red", "c_dragon_red");
+
+            Npcs.Add("c_m_dragon_small_black", "c_dragon_black");
+
+            Npcs.Add("c_h_sprte_mage", "c_sprite_mage");
         }
     }
 
