@@ -10,7 +10,18 @@ namespace SphereConvertionUtil
 
         public static Dictionary<string, string> Init()
         {
-            Items.Add("55I", "56D");
+            Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
+
+            Items.Add("i_muffins", "i_muffin");
+
+            Items.Add("i_pie_baked", "i_pie_sweet_potato");
+
+            Items.Add("i_pie_unbaked", "i_pie_sweet_potato_raw");
+
+            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied_2");
+
+            Items.Add("i_jars", "i_jar_honey");
+
             return Items;
         }
     }

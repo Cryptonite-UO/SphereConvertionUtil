@@ -213,7 +213,7 @@ namespace SphereConvertionUtil
                 int i = 0;
                 foreach (string[] prop in obj.Props)
                 {
-                    if (prop[0] == "MORE1" || prop[0] == "MORE2")
+                    if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY")
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
                         {
