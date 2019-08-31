@@ -48,8 +48,6 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_ophidian_mage", "c_ophidian_archmage");
 
-            Npcs.Add("c_sea_monster", "");//pas trouver dans 56d
-
             Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
 
             Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant
