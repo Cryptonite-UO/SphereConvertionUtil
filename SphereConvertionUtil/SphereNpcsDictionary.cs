@@ -87,6 +87,8 @@ namespace SphereConvertionUtil
             Npcs.Add("c_h_warrior", "c_savage_warrior_male");
 			
 			Npcs.Add("c_m_exodus", "c_exodus_overseer");
+			
+			Npcs.Add("c_dracoliche", "c_skeletal_dragon");
 
             return Npcs;
         }
