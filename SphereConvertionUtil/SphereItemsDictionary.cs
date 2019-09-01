@@ -20,6 +20,22 @@ namespace SphereConvertionUtil
 
             Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied_2");
 
+            Items.Add("i_jars", "i_jar_honey");+
+
+            Items.Add("i_BRUSH_HORSE_4", "i_brush_horse_2");
+
+            Items.Add("i_deed_ship_dragon_long_N", "i_deed_large_dragon_ship_N");
+
+            Items.Add("i_jars", "i_jar_honey");
+
+            Items.Add("i_jars", "i_jar_honey");
+
+            Items.Add("i_jars", "i_jar_honey");
+
+            Items.Add("i_jars", "i_jar_honey");
+
+            Items.Add("i_jars", "i_jar_honey");
+
             Items.Add("i_jars", "i_jar_honey");
 
             return Items;
