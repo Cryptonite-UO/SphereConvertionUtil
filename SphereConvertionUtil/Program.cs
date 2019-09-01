@@ -218,7 +218,7 @@ namespace SphereConvertionUtil
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
                         {
-                            if (prop[1].Contains(kvp.Key) && kvp.Value != "")
+                            if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
                                 obj.Props[i][1] = obj.Props[i][1].Replace(kvp.Key, kvp.Value);
                             }
