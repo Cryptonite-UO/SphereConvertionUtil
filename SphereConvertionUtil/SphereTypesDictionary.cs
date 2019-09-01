@@ -10,7 +10,15 @@ namespace SphereConvertionUtil
         public static Dictionary<string,string> Init()
         {
             //"ID55I, ID556D"
-            Types.Add("55i", "56d");
+            Types.Add("T_L1MAP", "t_map");
+
+            Types.Add("T_L2MAP", "t_map");
+
+            Types.Add("T_L3MAP", "t_map");
+
+            Types.Add("T_L4MAP", "t_map");
+
+            Types.Add("T_L5MAP", "t_map");
 
             return Types;
         }

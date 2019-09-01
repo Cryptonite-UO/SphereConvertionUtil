@@ -91,6 +91,7 @@ namespace SphereConvertionUtil
             Npcs.Add("c_h_bandit_m_crossbow", "c_bandit_m"); // Faudrait en trouver 1 avec un arbalete pour faire pareil (Souterrain buccanner's den)
 
             Npcs.Add("c_troll_w_mace", "c_troll_w_axe");
+
             return Npcs;
         }
     }

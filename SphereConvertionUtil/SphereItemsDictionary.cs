@@ -26,17 +26,17 @@ namespace SphereConvertionUtil
 
             Items.Add("i_deed_ship_dragon_long_N", "i_deed_large_dragon_ship_N");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("i_mt_ostard_zostrich", "i_mt_ostard_frenzied");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("i_deed_ship_small_N", "i_deed_small_ship_n");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("i_largereg_bag", "i_bag");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("I_SEW_BARB", "i_sewing_kit");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
 
-            Items.Add("i_jars", "i_jar_honey");
+            Items.Add("i_decorative_armor_2", "0151c");
 
             return Items;
         }
