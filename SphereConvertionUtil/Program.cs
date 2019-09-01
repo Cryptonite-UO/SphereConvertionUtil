@@ -238,7 +238,6 @@ namespace SphereConvertionUtil
                             if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
                                 obj.Props[i][1] = Regex.Replace(obj.Props[i][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
-                                obj.EditedMore = true;
                             }
                         }
 
