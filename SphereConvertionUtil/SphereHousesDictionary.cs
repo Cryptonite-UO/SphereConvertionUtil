@@ -62,9 +62,6 @@ namespace SphereConvertionUtil
             //04078
             Houses.Add("i_multi_house_stone_plaster_2story", "m_two_story_stone_and_plaster_house");
 
-            //0407a
-            Houses.Add("i_multi_tower", "m_tower");
-
             //0407c
             Houses.Add("i_multi_keep", "m_small_stone_keep");
 
@@ -82,6 +79,9 @@ namespace SphereConvertionUtil
 
             //04098
             Houses.Add("i_multi_tower_wizard", "m_small_stone_tower");
+
+            //0407a
+            Houses.Add("i_multi_tower", "m_tower");
 
             //0409a
             Houses.Add("i_multi_cabin_log_2story", "m_two_story_log_cabin");
