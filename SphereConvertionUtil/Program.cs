@@ -14,6 +14,7 @@ namespace SphereConvertionUtil
         private static Dictionary<string, string> Houses = SphereHousesDictionary.Init();
         private static Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
         private static Dictionary<string, string> Items = SphereItemsDictionary.Init();
+        private static Dictionary<string, string> Types = SphereTypesDictionary.Init();
         private static string file = "";
         private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
@@ -206,14 +207,14 @@ namespace SphereConvertionUtil
 
         private static void ConvertSpawn()
         {
-            Console.Write("Correction des MORE, Npcs, Deeds et Items... ");
+            Console.Write("Correction des MORE, Npcs,Types, Deeds et Items... ");
             foreach (SphereSaveObj obj in SphereObjs)
             {
                 spin.Turn();
                 int i = 0;
                 foreach (string[] prop in obj.Props)
                 {
-                    if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY")
+                    if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY" || prop[0] == "TYPE")
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
                         {
@@ -224,6 +225,15 @@ namespace SphereConvertionUtil
                         }
 
                         foreach (KeyValuePair<string, string> kvp in Npcs)
+                        {
+                            if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
+                            {
+                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
+                                obj.EditedMore = true;
+                            }
+                        }
+
+                        foreach (KeyValuePair<string, string> kvp in Types)
                         {
                             if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
