@@ -50,7 +50,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
 
-            Npcs.Add("c_m_treant", "c_m_treant");//fait partie de treant.scp c_m_treant
+            Npcs.Add("c_m_treant", "c_reaper_redux");//Remplacé par un nouveau
 
             Npcs.Add("c_m_balron", "c_demon_balron");
 
