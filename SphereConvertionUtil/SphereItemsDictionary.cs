@@ -38,6 +38,8 @@ namespace SphereConvertionUtil
 
             Items.Add("i_decorative_armor_2", "0151c");
 
+            Items.Add("i_bookcase_peter", "i_bookcase_ruined");
+
             return Items;
         }
     }
