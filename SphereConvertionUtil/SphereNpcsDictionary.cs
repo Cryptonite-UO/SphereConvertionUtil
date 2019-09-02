@@ -59,6 +59,8 @@ namespace SphereConvertionUtil
             Npcs.Add("c_dragon_small_red", "c_dragon_red");
 
             Npcs.Add("c_dragon_small_black", "c_dragon_black");
+		
+            Npcs.Add("c_white_wyrm", "c_wyrm_white");
 
             Npcs.Add("c_h_sprte_mage", "c_sprite_mage");
 
