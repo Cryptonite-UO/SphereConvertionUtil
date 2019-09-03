@@ -36,9 +36,11 @@ namespace SphereConvertionUtil
 
             Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
 
-            Items.Add("i_decorative_armor_2", "0151c");
+            Items.Add("i_decorative_armor_2", "0151c"); //Pas sur que mettre un ID ca fonctionne
 
             Items.Add("i_bookcase_peter", "i_bookcase_ruined");
+
+            Items.Add("i_bench_woodworker_end", "i_bench_woodworker");
 
             return Items;
         }
