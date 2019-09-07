@@ -15,6 +15,7 @@ namespace SphereConvertionUtil
         private static Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
         private static Dictionary<string, string> Items = SphereItemsDictionary.Init();
         private static Dictionary<string, string> Types = SphereTypesDictionary.Init();
+        private static List<string> DeleteList = SphereToDeleteDictionary.Init();
         private static string file = "";
         private static string dirpath = "";
         private static List<Ligne> linesTowrite = new List<Ligne>();
@@ -31,12 +32,13 @@ namespace SphereConvertionUtil
 
             //Traduction(@"sphere_msgs.scp");
 
-            AskFilePath("sphereworld.scp");
+            /*AskFilePath("sphereworld.scp");
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
+            CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
@@ -44,7 +46,7 @@ namespace SphereConvertionUtil
             WriteTofile("/sphereworld_new.scp", SphereObjs);
 
             Console.WriteLine("Terminé ;) pour sphereworld.scp");
-
+            */
             //SphereChars.scp TODO: lire les deux fichier dans la method 
             AskFilePath("spherechars.scp");
             SphereObjs = new List<SphereSaveObj>();
@@ -53,7 +55,7 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-
+            CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
@@ -154,6 +156,28 @@ namespace SphereConvertionUtil
                 }
                 linecount++;
             }
+        }
+
+        private static void CleanItems()
+        {
+            Console.Write("Netoyage des items memoire... \n");
+            List<SphereSaveObj> toDelete = new List<SphereSaveObj>();
+            foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
+            {
+                foreach (string item in DeleteList)
+                {
+                    if (obj.Id.ToLower() == item.ToLower())
+                    {
+                        toDelete.Add(obj);
+                    }
+                }
+            }
+
+            foreach (SphereSaveObj obj in toDelete)
+            {
+                SphereObjs.Remove(obj);
+            }
+            toDelete.Clear();
         }
 
         private static void ConvertItems()
