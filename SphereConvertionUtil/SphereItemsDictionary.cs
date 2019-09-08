@@ -43,6 +43,8 @@ namespace SphereConvertionUtil
             Items.Add("i_bench_woodworker_end", "i_bench_woodworker");
             
             Items.Add("i_chair_wood_bamboo", "i_chair_wood_2");
+                                    
+            Items.Add("i_death_robe", "i_deathshroud_craft"); // ROBE que je crois inutile mais au cas que qqn en avait une
 
             return Items;
         }
