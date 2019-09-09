@@ -48,11 +48,7 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_ophidian_mage", "c_ophidian_archmage");
 
-            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
-
             Npcs.Add("c_m_treant", "c_reaper_redux");//Remplacé par un nouveau
-
-            Npcs.Add("c_m_balron", "c_demon_balron");
 
             Npcs.Add("c_m_icefiend", "c_demon_ice");
 
@@ -88,7 +84,7 @@ namespace SphereConvertionUtil
 			
             Npcs.Add("c_m_exodus", "c_exodus_overseer");
 						
-            Npcs.Add("c_dracoliche", "c_skeletal_dragon");
+            Npcs.Add("c_m_dracoliche", "c_skeletal_dragon");
 						
             Npcs.Add("c_h_bandit_m_crossbow", "c_bandit_m_crossbow");
 						
@@ -106,9 +102,17 @@ namespace SphereConvertionUtil
 				
             Npcs.Add("c_A_SNOW_LEOPARD", "c_leopard_snow");
 								
-            Npcs.Add("c_frostspider", "c_spider_frost");
+            Npcs.Add("c_m_frostspider", "c_spider_frost");
 								
-            Npcs.Add("c_mountain_goat", "c_goat_mountain");
+            Npcs.Add("c_a_mountain_goat", "c_goat_mountain");
+											
+            Npcs.Add("c_daemon", "c_demon");
+														
+            Npcs.Add("c_daemon_w_sword", "c_demon_blackgate");
+													
+            Npcs.Add("c_m_balron", "c_demon_balron");
+
+            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
 
             return Npcs;
         }
