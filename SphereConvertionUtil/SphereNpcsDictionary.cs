@@ -103,6 +103,12 @@ namespace SphereConvertionUtil
             Npcs.Add("c_bandit_beserk4", "c_bandit_beserk");
 		
             Npcs.Add("c_troll_w_mace", "c_troll_w_axe");
+				
+            Npcs.Add("c_A_SNOW_LEOPARD", "c_leopard_snow");
+								
+            Npcs.Add("c_frostspider", "c_spider_frost");
+								
+            Npcs.Add("c_mountain_goat", "c_goat_mountain");
 
             return Npcs;
         }
