@@ -18,8 +18,6 @@ namespace SphereConvertionUtil
 
             Items.Add("i_pie_unbaked", "i_pie_sweet_potato_raw");
 
-            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied_2");
-
             Items.Add("i_jars", "i_jar_honey");
 
             Items.Add("i_BRUSH_HORSE_4", "i_brush_horse_2");
@@ -100,8 +98,8 @@ namespace SphereConvertionUtil
                                                                                                                         
             Items.Add("i_tapestry_5_w", "i_tapestry_5_n");//Flip pour différente partie
                                                                                                                                     
-            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied");
-              
+            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied2");
+             
                           
 
             return Items;
