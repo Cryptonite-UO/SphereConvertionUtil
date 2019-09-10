@@ -108,11 +108,27 @@ namespace SphereConvertionUtil
 											
             Npcs.Add("c_daemon", "c_demon");
 														
-            Npcs.Add("c_daemon_w_sword", "c_demon_blackgate");
+            Npcs.Add("c_daemon_w_sword", "c_demon_blackgate");//Pas trouvé avec une épé...
 													
             Npcs.Add("c_m_balron", "c_demon_balron");
+													
+            Npcs.Add("c_m_balrog", "c_demon_blackgate"); //Pas trouvé avec une épée...
 
-            Npcs.Add("c_m_snow_daemon", "c_m_snow_daemon");//fait partie de NPCPack1.scp c_m_snow_daemon
+            Npcs.Add("c_m_snow_daemon", "c_demon_ice");//remplacé par un semblable
+			
+            Npcs.Add("c_wood_elemental", "c_treefellow");//Propice a une équivalence	
+			
+            Npcs.Add("C_H_BARBER", "c_hairstylist_f"); //Ya aussi le gars mais les coiffeuses c des femmes :-)
+					
+            Npcs.Add("C_H_FIGHT_OVERSEER", "C_FIGHT_OVERSEER");
+					
+            Npcs.Add("C_H_EVILMAGE_F", "C_EVILMAGE");
+					
+            Npcs.Add("C_H_EVILMAGE", "C_EVILMAGE");	
+					
+            Npcs.Add("c_h_barbarian_chieftan", "c_barbarian_chieftain");
+							
+            Npcs.Add("C_H_PIRATE", "c_pirate_m");
 
             return Npcs;
         }
