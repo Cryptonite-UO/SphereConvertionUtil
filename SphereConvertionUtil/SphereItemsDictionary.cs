@@ -22,8 +22,6 @@ namespace SphereConvertionUtil
 
             Items.Add("i_BRUSH_HORSE_4", "i_brush_horse_2");
 
-            Items.Add("i_mt_ostard_zostrich", "i_mt_ostard_frenzied");
-
             Items.Add("i_deed_ship_small_N", "i_deed_small_ship_n");
 
             Items.Add("i_largereg_bag", "i_bag");
@@ -32,7 +30,7 @@ namespace SphereConvertionUtil
 
             Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
 
-            Items.Add("i_decorative_armor_2", "i_decorative_armor");
+            Items.Add("i_decorative_armor_2", "i_decorative_armor"); //Bizarre marche pas
 
             Items.Add("i_bookcase_peter", "i_bookcase_ruined");
 
@@ -98,8 +96,54 @@ namespace SphereConvertionUtil
                                                                                                                         
             Items.Add("i_tapestry_5_w", "i_tapestry_5_n");//Flip pour différente partie
                                                                                                                                     
-            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied2");
-             
+            Items.Add("i_tapestry_7_w", "i_tapestry_7_n");//Flip pour différente partie
+                                                                                                                                    
+            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied");
+            
+            Items.Add("i_mt_ostard_zostrich", "i_mt_ostard_frenzied");
+                                                                                                                                                
+            Items.Add("i_deed_house_patio_marble", "i_deed_marble_house_with_patio");
+                                                                                                                                                            
+            //Items.Add("i_deed_cabin_log_2story", "");
+                                                                                                                                                            
+            //Items.Add("i_deed_house_patio_sand", "");
+                                                                                                                                                            
+            //Items.Add("i_deed_villa_2story", "");  
+            
+            //Items.Add("i_deed_shop_stone_small", "");
+                                                                                                                                                            
+            //Items.Add("i_deed_tower_wizard", "");
+                                                                                                                                                            
+            //Items.Add("i_deed_shop_marble_small", "");
+                                                                                                                                                            
+            //Items.Add("i_deed_house_wheat_cottage", "");
+            
+            //Items.Add("i_deed_shop_blacksmithy_large", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_keep", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_house_stone_plaster_2story", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_house_wood_plaster_2story", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_house_3room", "");
+                                                                                                                                                                        
+            Items.Add("i_deed_tent_green", "i_deed_green_tent");      
+            
+            Items.Add("i_deed_tent_blue", "i_deed_blue_tent");
+                                                                                                                                                                        
+            //Items.Add("i_deed_House_wood_thatched_small", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_House_wood_plaster_small", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_House_stone_wood_small", "");
+                                                                                                                                                                                                  
+            //Items.Add("i_deed_House_stone_brick_small", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_House_stone_small", "");
+                                                                                                                                                                        
+            //Items.Add("i_deed_house_stone_plaster_small", "");
+
                           
 
             return Items;
