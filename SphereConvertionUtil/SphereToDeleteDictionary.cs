@@ -13,6 +13,8 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_arena_random_2v2");
             
+            DeleteList.Add("i_pierre_depecage_dragon_small_red");
+            
             return DeleteList;
         }
     }
