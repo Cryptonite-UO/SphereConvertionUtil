@@ -104,45 +104,45 @@ namespace SphereConvertionUtil
                                                                                                                                                 
             Items.Add("i_deed_house_patio_marble", "i_deed_marble_house_with_patio");
                                                                                                                                                             
-            //Items.Add("i_deed_cabin_log_2story", "");
+            Items.Add("i_deed_cabin_log_2story", "i_deed_two_story_log_cabin");
                                                                                                                                                             
-            //Items.Add("i_deed_house_patio_sand", "");
+            Items.Add("i_deed_house_patio_sand", "i_deed_sandstone_house_with_patio");
                                                                                                                                                             
-            //Items.Add("i_deed_villa_2story", "");  
+            Items.Add("i_deed_villa_2story", "i_deed_two_story_villa");  
             
-            //Items.Add("i_deed_shop_stone_small", "");
+            Items.Add("i_deed_shop_stone_small", "i_deed_small_stone_workshop");
                                                                                                                                                             
-            //Items.Add("i_deed_tower_wizard", "");
+            Items.Add("i_deed_tower_wizard", "i_deed_small_stone_tower");
                                                                                                                                                             
-            //Items.Add("i_deed_shop_marble_small", "");
+            Items.Add("i_deed_shop_marble_small", "i_deed_small_marble_workshop");
                                                                                                                                                             
-            //Items.Add("i_deed_house_wheat_cottage", "");
+            Items.Add("i_deed_house_wheat_cottage", "i_deed_thatched_roof_cottage"); // PAS TROUVÉ le vrai équivalent..  Mis qqch de semblable
             
-            //Items.Add("i_deed_shop_blacksmithy_large", "");
+            Items.Add("i_deed_shop_blacksmithy_large", "i_deed_large_house_with_patio");
                                                                                                                                                                         
-            //Items.Add("i_deed_keep", "");
+            Items.Add("i_deed_keep", "i_deed_small_stone_keep");
                                                                                                                                                                         
-            //Items.Add("i_deed_house_stone_plaster_2story", "");
+            Items.Add("i_deed_house_stone_plaster_2story", "i_deed_two_story_stone_and_plaster_house");
                                                                                                                                                                         
-            //Items.Add("i_deed_house_wood_plaster_2story", "");
+            Items.Add("i_deed_house_wood_plaster_2story", "i_deed_two_story_wood_and_plaster_house");
                                                                                                                                                                         
-            //Items.Add("i_deed_house_3room", "");
+            Items.Add("i_deed_house_3room", "i_deed_brick_house");
                                                                                                                                                                         
             Items.Add("i_deed_tent_green", "i_deed_green_tent");      
             
             Items.Add("i_deed_tent_blue", "i_deed_blue_tent");
                                                                                                                                                                         
-            //Items.Add("i_deed_House_wood_thatched_small", "");
+            Items.Add("i_deed_House_wood_thatched_small", "i_deed_thatched_roof_cottage");
                                                                                                                                                                         
-            //Items.Add("i_deed_House_wood_plaster_small", "");
+            Items.Add("i_deed_House_wood_plaster_small", "i_deed_wood_and_plaster_house");
                                                                                                                                                                         
-            //Items.Add("i_deed_House_stone_wood_small", "");
+            Items.Add("i_deed_House_stone_wood_small", "i_deed_wooden_house");
                                                                                                                                                                                                   
-            //Items.Add("i_deed_House_stone_brick_small", "");
+            Items.Add("i_deed_House_stone_brick_small", "i_deed_small_brick_house");
                                                                                                                                                                         
-            //Items.Add("i_deed_House_stone_small", "");
+            Items.Add("i_deed_House_stone_small", "i_deed_field_stone_house");
                                                                                                                                                                         
-            //Items.Add("i_deed_house_stone_plaster_small", "");
+            Items.Add("i_deed_house_stone_plaster_small", "i_deed_stone_and_plaster_house");
 
                           
 
