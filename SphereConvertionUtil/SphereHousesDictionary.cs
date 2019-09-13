@@ -99,7 +99,7 @@ namespace SphereConvertionUtil
             Houses.Add("i_multi_shop_marble_small", "m_small_marble_workshop");
             
             //04BB8
-            //Houses.Add("i_multi_house_wheat_cottage", "?????"); //BESOIN DE TROUVER L'ÉQUIVALENT
+            //Houses.Add("i_multi_house_wheat_cottage", "?????"); //ÉQUIVALENT n'existe pas dans tous les maisons 56D on remplace par quoi?
 
             return Houses;
         }
