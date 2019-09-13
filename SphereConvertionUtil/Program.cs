@@ -32,7 +32,7 @@ namespace SphereConvertionUtil
 
             //Traduction(@"sphere_msgs.scp");
 
-            /*AskFilePath("sphereworld.scp");
+            AskFilePath("sphereworld.scp");
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
@@ -46,7 +46,7 @@ namespace SphereConvertionUtil
             WriteTofile("/sphereworld_new.scp", SphereObjs);
 
             Console.WriteLine("Terminé ;) pour sphereworld.scp");
-            */
+            
             //SphereChars.scp TODO: lire les deux fichier dans la method 
             AskFilePath("spherechars.scp");
             SphereObjs = new List<SphereSaveObj>();
@@ -55,7 +55,7 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            CleanItems();
+            //CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
