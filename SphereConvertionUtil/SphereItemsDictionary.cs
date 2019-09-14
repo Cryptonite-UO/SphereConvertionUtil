@@ -59,13 +59,9 @@ namespace SphereConvertionUtil
             Items.Add("i_deed_ship_long_N", "i_deed_large_ship_n");
                                                             
             Items.Add("i_bench_wood_smooth_end", "i_bench_wood_smooth");
-                                                            
             Items.Add("i_bench_wood_smooth_ext", "i_bench_wood_smooth");//Flip pour différente partie
-                                                            
             Items.Add("i_table_wood_smooth_narrow_ext", "i_table_wood_smooth_narrow_end");//Flip pour différente partie
-                                                            
             Items.Add("i_table_wood_solid_custom_corner_ns", "i_table_wood_solid_narrow_end");//Flip pour différente partie
-                                                            
             Items.Add("i_table_wood_solid_custom_corner_ew", "i_table_wood_solid_narrow_end");//Flip pour différente partie
                                                                         
             Items.Add("i_pet_daemon", "i_pet_demon");
@@ -79,19 +75,12 @@ namespace SphereConvertionUtil
             Items.Add("i_fish_cooked", "i_fish_cooked_headless");
                                                                                                                                                                                                             
             Items.Add("i_bed_21", "0a7a");//Flip pour différente partie
-                                                                                                
             Items.Add("i_bed_20", "0a7a");//Flip pour différente partie
-                                                                                                                        
             Items.Add("i_bed_2", "i_bed_1");//Flip pour différente partie
-                                                                                                
             Items.Add("i_bed_5", "i_bed_6");//Flip pour différente partie
-                                                                                                                        
             Items.Add("i_bed_25", "0a80");//Flip pour différente partie
-                                                                                                
             Items.Add("i_bed_24", "0a80");//Flip pour différente partie
-                                                                                                                                    
             Items.Add("i_bed_26", "0a80");//Flip pour différente partie
-                                                                                                
             Items.Add("i_bed_27", "0a80");//Flip pour différente partie
                                                                                                                         
             Items.Add("i_tapestry_5_w", "i_tapestry_5_n");//Flip pour différente partie
@@ -159,20 +148,20 @@ namespace SphereConvertionUtil
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e", ""); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_3_of_3_w", ""); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w_3", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_2_of_3_e_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_e_4", ""); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_3_of_3_e_4", ""); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_2_of_3_e", ""); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_2_of_3_n", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_3_of_3_n", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_n", ""); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_n", ""); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w_2", ""); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_3_of_3_w_4", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_3_of_3_n_4", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_2_of_3_s_4", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_3_of_3_s_3", ""); // Ajout au defname marche pas
-			Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_s_4", ""); // Ajout au defname marche pas
-			Items.Add("i_forge_2_part_3_of_3_s_4", ""); // Ajout au defname marche pas
-			Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_n_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_s_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_s_3", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_s_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_s_4", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", ""); // Ajout au defname marche pas
             ////////////////////////////////FIN FORGE//////////////////////////////////              
 
             return Items;
