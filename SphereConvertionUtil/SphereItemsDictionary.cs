@@ -143,6 +143,10 @@ namespace SphereConvertionUtil
             Items.Add("i_deed_House_stone_small", "i_deed_field_stone_house");
                                                                                                                                                                         
             Items.Add("i_deed_house_stone_plaster_small", "i_deed_stone_and_plaster_house");
+                                                                                                                                                                                    
+            Items.Add("i_decorative_shield_12_sword_over_nw", "i_decorative_shield_and_sword_1");
+                                                                                                                                                                                                
+            Items.Add("i_treas_map_rolled_1", "i_ttm_l1_2"); // remplacé par une carte au trésor normal
 
                           
 
