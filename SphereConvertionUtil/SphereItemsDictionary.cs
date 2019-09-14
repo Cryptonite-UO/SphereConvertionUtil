@@ -147,8 +147,33 @@ namespace SphereConvertionUtil
             Items.Add("i_decorative_shield_12_sword_over_nw", "i_decorative_shield_and_sword_1");
                                                                                                                                                                                                 
             Items.Add("i_treas_map_rolled_1", "i_ttm_l1_2"); // remplacé par une carte au trésor normal
-
-                          
+            
+            /////////////////////////////////////FORGE//////////////////////////////////
+            //Items.Add("i_forge_2_part_2_of_3_w", "i_forge_large");  // MIS DS DEFNAME         
+            //Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w", "i_forge_large_bellows");  // MIS DS DEFNAME                                                                                                                                                                                                
+            Items.Add("i_forge_2_part_3_of_3_w_2", "01983");  // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_s", "01995"); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_s", "01997"); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_s", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_w_2", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_w", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w_3", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_2_of_3_e_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_e_4", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_e", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_2_of_3_n", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_3_of_3_n", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_n", ""); // Ajout au defname marche pas
+            Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w_2", ""); // Ajout au defname marche pas
+            Items.Add("i_forge_2_part_3_of_3_w_4", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_3_of_3_n_4", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_2_of_3_s_4", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_3_of_3_s_3", ""); // Ajout au defname marche pas
+			Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_s_4", ""); // Ajout au defname marche pas
+			Items.Add("i_forge_2_part_3_of_3_s_4", ""); // Ajout au defname marche pas
+			Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", ""); // Ajout au defname marche pas
+            ////////////////////////////////FIN FORGE//////////////////////////////////              
 
             return Items;
         }
