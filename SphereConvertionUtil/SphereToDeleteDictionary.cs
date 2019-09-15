@@ -17,11 +17,11 @@ namespace SphereConvertionUtil
                         
             DeleteList.Add("i_pierre_depecage_dragon_small_black");
                                     
-            DeleteList.Add("i_charsheet");
+            //DeleteList.Add("i_charsheet");  // NON, Phil ne veut pas :-)
                                                 
-            DeleteList.Add("i_questjournal");
+            //DeleteList.Add("i_questjournal");  // NON, Phil ne veut pas :-)
                                                 
-            DeleteList.Add("i_newbiesheet");
+            //DeleteList.Add("i_newbiesheet");  // NON, Phil ne veut pas :-)
             
             return DeleteList;
         }
