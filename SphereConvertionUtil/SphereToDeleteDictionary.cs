@@ -35,9 +35,23 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_humain_holocurst_stone");
 
-            DeleteList.Add("i_humain_holocurst_stone");
-
-
+            DeleteList.Add("i_humain_naurul_stone");
+            
+            DeleteList.Add("i_elfebois_stone");
+                        
+            DeleteList.Add("i_elfe_sauvage_stone");
+                        
+            DeleteList.Add("i_elfe_noir_stone");
+                        
+            DeleteList.Add("i_nains_terres_stone");
+                                    
+            DeleteList.Add("i_nains_gris_stone");
+                                                
+            DeleteList.Add("i_nains_profondeurs_stone");
+                                                
+            DeleteList.Add("i_orc_stone");
+                                                
+            DeleteList.Add("i_demi_orc_stone");
 
             return DeleteList;
         }
