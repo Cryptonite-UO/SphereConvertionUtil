@@ -28,8 +28,14 @@ namespace SphereConvertionUtil
 
             Items.Add("I_SEW_BARB", "i_sewing_kit");
 
+            ////////Pierre de race/////
             Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
-
+            Items.Add("i_humain_akaran_stone", "i_stone_race_humain");
+            Items.Add("i_haut_elfe_stone", "i_stone_race_elfe");
+            Items.Add("i_nains_montagnes_stone", "i_stone_race_nain");
+            Items.Add("i_gnomes_bois_stone", "i_stone_race_gnome");
+            /////////// FIN///////////
+            
             Items.Add("i_decorative_armor_2", "i_decorative_armor"); //Bizarre marche pas
 
             Items.Add("i_bookcase_peter", "i_bookcase_ruined");
