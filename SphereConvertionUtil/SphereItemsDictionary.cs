@@ -13,7 +13,7 @@ namespace SphereConvertionUtil
                                                                                                                                                                                                                                                                                                                                                                         
             //Items.Add("i_HAIR_DYEs", ""); /////////TROUVE PAS
                                                                                                                                                                                                                                                                                                                                                                                                             
-            //Items.Add("i_vise", "");/////////TROUVE PAS
+            Items.Add("i_vise", "019f4");
             
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
             
