@@ -10,7 +10,14 @@ namespace SphereConvertionUtil
 
         public static Dictionary<string, string> Init()
         {
+                                                                                                                                                                                                                                                                                                                                                                        
+            //Items.Add("i_HAIR_DYEs", ""); /////////TROUVE PAS
+                                                                                                                                                                                                                                                                                                                                                                                                            
+            //Items.Add("i_vise", "");/////////TROUVE PAS
+            
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
+            
+            Items.Add("i_wall_carving_stone_4", "i_wall_carving_7");
 
             Items.Add("i_muffins", "i_muffin");
             Items.Add("i_muffins_2", "i_muffin_2");
@@ -22,7 +29,9 @@ namespace SphereConvertionUtil
 
             Items.Add("i_jars", "i_jar_honey");
 
-            Items.Add("i_BRUSH_HORSE_4", "i_brush_horse_2");
+            Items.Add("i_BRUSH_HORSE_4", "01373");
+                                                                                                                                                                                                                                                                                                                                                                                                            
+            Items.Add("i_BRUSH_HORSE_3", "i_brush_horse_2");
 
             Items.Add("i_deed_ship_small_N", "i_deed_small_ship_n");
 
@@ -65,6 +74,8 @@ namespace SphereConvertionUtil
             Items.Add("i_table_wood_smooth_narrow_ext", "0b6d");
             Items.Add("i_table_wood_solid_custom_corner_ns", "0b82");
             Items.Add("i_table_wood_solid_custom_corner_ew", "0b6f");
+            Items.Add("i_table_board_rough_custom_corner_ew", "0b8a");
+            Items.Add("i_table_board_rough_ext", "0b8d");
                                                                         
             Items.Add("i_pet_daemon", "i_pet_demon");
                                                                                                                                                             
@@ -143,7 +154,9 @@ namespace SphereConvertionUtil
                                                                                                                                                                         
             Items.Add("i_deed_house_stone_plaster_small", "i_deed_stone_and_plaster_house");
                                                                                                                                                                                     
-            Items.Add("i_decorative_shield_12_sword_over_nw", "i_decorative_shield_and_sword_1");
+            Items.Add("i_decorative_shield_12_sword_over_nw", "01634");
+                                                                                                                                                                                                
+            Items.Add("i_decorative_shield_13_sword_under_nw", "01637");
                                                                                                                                                                                                 
             Items.Add("i_treas_map_rolled_1", "i_ttm_l1_2"); // remplacé par une carte au trésor normal
                                                                                                                                                                                                             
@@ -162,6 +175,41 @@ namespace SphereConvertionUtil
             Items.Add("i_pigs_head_2", "01e8f");
                                                                                                                                                                                                                                                                         
             Items.Add("i_bird_dead_4", "01e86");
+                                                                                                                                                                                                                                                                                    
+            Items.Add("i_BARDING_HORSE_1", "i_barding_horse");
+                                                                                                                                                                                                                                                                                                
+            Items.Add("i_CHECKERS_PILE_RED", "i_checkers_red");
+                                                                                                                                                                                                                                                                                                            
+            Items.Add("i_board_unfinished_2", "01e77");
+                                                                                                                                                                                                                                                                                                                        
+            Items.Add("i_pot_4", "i_pot_medium");
+                                                                                                                                                                                                                                                                                                                        
+            Items.Add("i_sandfireplace_east", "i_fireplace_sandstone_2"); //Viens en 2 partie bizzare
+                                                                                                                                                                                                                                                                                                                        
+            Items.Add("i_tete_miseajour", "09f30");
+                                                                                                                                                                                                                                                                                                                                    
+            Items.Add("i_pigs_feet_2", "01e8d");
+                                                                                                                                                                                                                                                                                                                                                
+            Items.Add("i_wig_stand_4", "0e06");
+                                                                                                                                                                                                                                                                                                                                                            
+            Items.Add("i_wig_11", "0e0e");
+                                                                                                                                                                                                                                                                                                                                                            
+            Items.Add("i_frypan", "i_fry_pan");
+                                                                                                                                                                                                                                                                                                                                                                        
+            Items.Add("i_winch", "i_winch_east");
+                                                                                                                                                                                                                                                                                                                                                                                    
+            Items.Add("i_harrow_part_1", "i_harrow");
+
+                                                                                                                                                                                                                                                                                                                                                                                                
+            Items.Add("i_bookcase_unfinished_2", "01e7e");
+                                                                                                                                                                                                                                                                                                                                                                                                
+            Items.Add("i_floor_marble_5", "i_floor_marble_4");
+                                                                                                                                                                                                                                                                                                                                                                                                
+            Items.Add("i_CHESSMEN_BLACK_sw", "i_CHESSMEN_BLACK");
+                                                                                                                                                                                                                                                                                                                                                                                                            
+            Items.Add("i_pet_wolf_gray", "i_pet_wolf_grey_2");
+            
+            
 
             /////////////////////////////////////FORGE//////////////////////////////////
             Items.Add("i_forge_2_part_2_of_3_w", "i_forge_large");         
