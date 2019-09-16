@@ -96,7 +96,7 @@ namespace SphereConvertionUtil
             Items.Add("i_bed_26", "0a7e");
             Items.Add("i_bed_27", "0a7f");
                                                                                                                         
-            Items.Add("i_tapestry_5_w", "ofdb");
+            Items.Add("i_tapestry_5_w", "0fdb");
                                                                                                                                     
             Items.Add("i_tapestry_7_w", "0fe3");
                                                                                                                                    
