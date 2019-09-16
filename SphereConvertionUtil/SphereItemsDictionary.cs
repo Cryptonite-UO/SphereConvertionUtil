@@ -13,6 +13,8 @@ namespace SphereConvertionUtil
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
 
             Items.Add("i_muffins", "i_muffin");
+            Items.Add("i_muffins_2", "i_muffin_2");
+            Items.Add("i_muffins_3", "i_muffin_3");
 
             Items.Add("i_pie_baked", "i_pie_sweet_potato");
 
@@ -27,16 +29,10 @@ namespace SphereConvertionUtil
             Items.Add("i_largereg_bag", "i_bag");
 
             Items.Add("I_SEW_BARB", "i_sewing_kit");
-
-            ////////Pierre de race/////
-            Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
-            Items.Add("i_humain_akaran_stone", "i_stone_race_humain");
-            Items.Add("i_haut_elfe_stone", "i_stone_race_elfe");
-            Items.Add("i_nains_montagnes_stone", "i_stone_race_nain");
-            Items.Add("i_gnomes_bois_stone", "i_stone_race_gnome");
-            /////////// FIN///////////
             
-            Items.Add("i_decorative_armor_2", "i_decorative_armor"); //Bizarre marche pas
+            Items.Add("i_decorative_armor_2", "i_decorative_armor");
+                        
+            Items.Add("i_decorative_armor2_d", "i_decorative_armor2"); // le modele avec la hache a terre marche pas sur 56D DOnc hache ds les air
 
             Items.Add("i_bookcase_peter", "i_bookcase_ruined");
 
@@ -65,10 +61,10 @@ namespace SphereConvertionUtil
             Items.Add("i_deed_ship_long_N", "i_deed_large_ship_n");
                                                             
             Items.Add("i_bench_wood_smooth_end", "i_bench_wood_smooth");
-            Items.Add("i_bench_wood_smooth_ext", "i_bench_wood_smooth");//Flip pour différente partie
-            Items.Add("i_table_wood_smooth_narrow_ext", "i_table_wood_smooth_narrow_end");//Flip pour différente partie
-            Items.Add("i_table_wood_solid_custom_corner_ns", "i_table_wood_solid_narrow_end");//Flip pour différente partie
-            Items.Add("i_table_wood_solid_custom_corner_ew", "i_table_wood_solid_narrow_end");//Flip pour différente partie
+            Items.Add("i_bench_wood_smooth_ext", "0b64");
+            Items.Add("i_table_wood_smooth_narrow_ext", "0b6d");
+            Items.Add("i_table_wood_solid_custom_corner_ns", "0b82");
+            Items.Add("i_table_wood_solid_custom_corner_ew", "0b6f");
                                                                         
             Items.Add("i_pet_daemon", "i_pet_demon");
                                                                                                                                                             
@@ -80,18 +76,26 @@ namespace SphereConvertionUtil
                                                                                                             
             Items.Add("i_fish_cooked", "i_fish_cooked_headless");
                                                                                                                                                                                                             
-            Items.Add("i_bed_21", "0a7a");//Flip pour différente partie
-            Items.Add("i_bed_20", "0a7a");//Flip pour différente partie
-            Items.Add("i_bed_2", "i_bed_1");//Flip pour différente partie
-            Items.Add("i_bed_5", "i_bed_6");//Flip pour différente partie
-            Items.Add("i_bed_25", "0a80");//Flip pour différente partie
-            Items.Add("i_bed_24", "0a80");//Flip pour différente partie
-            Items.Add("i_bed_26", "0a80");//Flip pour différente partie
-            Items.Add("i_bed_27", "0a80");//Flip pour différente partie
+            Items.Add("i_bed_21", "0a79");
+            Items.Add("i_bed_20", "i_bed_large_made");
+            Items.Add("i_bed_2", "i_bed_small_made");//Flip pour différente partie
+            Items.Add("i_bed_5", "0a62");
+            Items.Add("i_bed_25", "0a7d");
+            Items.Add("i_bed_24", "0a7c");
+            Items.Add("i_bed_26", "0a7e");
+            Items.Add("i_bed_27", "0a7f");
                                                                                                                         
-            Items.Add("i_tapestry_5_w", "i_tapestry_5_n");//Flip pour différente partie
+            Items.Add("i_tapestry_5_w", "ofdb");
                                                                                                                                     
-            Items.Add("i_tapestry_7_w", "i_tapestry_7_n");//Flip pour différente partie
+            Items.Add("i_tapestry_7_w", "0fe3");
+                                                                                                                                    
+            Items.Add("i_tapestry_5_w", "ofdb");
+                                                                                                                                    
+            Items.Add("i_tapestry_4_w", "0fd7");
+                                                                                                                                    
+            Items.Add("i_tapestry_6_w", "0fdf");
+                                                                                                                                    
+            Items.Add("i_table_bamboo_end", "i_table_bamboo");
                                                                                                                                     
             Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied");
             
@@ -142,7 +146,23 @@ namespace SphereConvertionUtil
             Items.Add("i_decorative_shield_12_sword_over_nw", "i_decorative_shield_and_sword_1");
                                                                                                                                                                                                 
             Items.Add("i_treas_map_rolled_1", "i_ttm_l1_2"); // remplacé par une carte au trésor normal
-            
+                                                                                                                                                                                                            
+            Items.Add("i_portrait_7", "0ee7");
+                                                                                                                                                                                                                        
+            Items.Add("i_wall_wood_7", "i_wall_palisade");
+                                                                                                                                                                                                                        
+            Items.Add("i_guillotine", "i_guillotine_n");
+                                                                                                                                                                                                                                    
+            Items.Add("i_bench_5", "i_bench_stone");
+                                                                                                                                                                                                                                                
+            Items.Add("i_silverware_2", "09d4");
+                                                                                                                                                                                                                                                            
+            Items.Add("i_cloth_cut_2", "i_cloth"); //N'existe pas sur 56D remplacé par un cloth standard
+                                                                                                                                                                                                                                                            
+            Items.Add("i_pigs_head_2", "01e8f");
+                                                                                                                                                                                                                                                                        
+            Items.Add("i_bird_dead_4", "01e86");
+
             /////////////////////////////////////FORGE//////////////////////////////////
             Items.Add("i_forge_2_part_2_of_3_w", "i_forge_large");         
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_w", "i_forge_large_bellows");                                                                                                                                                                                                
@@ -168,7 +188,15 @@ namespace SphereConvertionUtil
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_s_4", "01995"); // Ajout au defname marche pas
             Items.Add("i_forge_2_part_3_of_3_s_4", "0199a"); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", "0199e"); // Ajout au defname marche pas
-            ////////////////////////////////FIN FORGE//////////////////////////////////              
+            ////////////////////////////////FIN FORGE//////////////////////////////////    
+            
+                        ////////Pierre de race/////
+            Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
+            Items.Add("i_humain_akaran_stone", "i_stone_race_humain");
+            Items.Add("i_haut_elfe_stone", "i_stone_race_elfe");
+            Items.Add("i_nains_montagnes_stone", "i_stone_race_nain");
+            Items.Add("i_gnomes_bois_stone", "i_stone_race_gnome");
+            /////////// FIN///////////
 
             return Items;
         }
