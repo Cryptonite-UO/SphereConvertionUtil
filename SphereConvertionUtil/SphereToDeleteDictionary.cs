@@ -53,6 +53,8 @@ namespace SphereConvertionUtil
                                                 
             DeleteList.Add("i_demi_orc_stone");
 
+            DeleteList.Add("i_lancerhache_memory");
+
             return DeleteList;
         }
     }
