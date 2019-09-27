@@ -55,7 +55,7 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            //CleanItems();
+            CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();

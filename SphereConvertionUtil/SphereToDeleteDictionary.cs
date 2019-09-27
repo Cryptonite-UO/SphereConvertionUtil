@@ -55,6 +55,8 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_lancerhache_memory");
 
+            DeleteList.Add("i_mem_appel");
+
             return DeleteList;
         }
     }
