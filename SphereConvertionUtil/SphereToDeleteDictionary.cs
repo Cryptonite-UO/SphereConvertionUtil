@@ -57,6 +57,8 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_mem_appel");
 
+            DeleteList.Add("i_mana_timer");
+
             return DeleteList;
         }
     }
