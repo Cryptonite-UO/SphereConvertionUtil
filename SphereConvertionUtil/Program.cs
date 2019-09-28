@@ -182,7 +182,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertItems()
         {
-            Console.Write("Correction des ID Items... \n");
+            Console.Write("Correction des ID et Disip des Items... \n");
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
             {
                 foreach (KeyValuePair<string, string> kvp in Items)
@@ -190,6 +190,14 @@ namespace SphereConvertionUtil
                     if (obj.Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                     {
                         obj.Id = kvp.Value;
+                        //Cherche et Remplace au DISPID
+                        foreach (string[] prop in obj.Props)
+                        {
+                            if (prop[0] == "DISPID")
+                            {
+                                prop[1] = kvp.Value;
+                            }
+                        }
                     }
                 }
             }
@@ -197,7 +205,7 @@ namespace SphereConvertionUtil
 
         private static void ConvertNpcs()
         {
-            Console.Write("Correction des ID Npcs... ");
+            Console.Write("Correction des ID et ACTION des Npcs... ");
             foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDCHAR"))
             {
                 spin.Turn();
@@ -207,6 +215,18 @@ namespace SphereConvertionUtil
                     {
                         obj.Id = kvp.Value;
                         obj.EditedId = true;
+                    }
+                }
+
+                //fix action 070 -> 111 merci @Jhobean
+                foreach (string[] prop in obj.Props)
+                {
+                    if (prop[0] == "ACTION")
+                    {
+                        if (prop[1] == "070")
+                        {
+                            prop[1] = "111";
+                        }
                     }
                 }
 
