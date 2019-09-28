@@ -58,6 +58,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_appel");
 
             DeleteList.Add("i_mana_timer");
+            
+            DeleteList.Add("c_npc_quete12_b"); //Ancien NPC requis avec brain beggar
 
             return DeleteList;
         }
