@@ -60,7 +60,14 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mana_timer");
             
             DeleteList.Add("c_npc_quete12_b"); //Ancien NPC requis avec brain beggar
-
+            
+            DeleteList.Add("i_mem_pv_bandit1"); //ajouter mais juste 1 bandit maintenant
+                        
+            DeleteList.Add("i_mem_pv_bandit2"); //ajouter mais juste 1 bandit maintenant
+                        
+            DeleteList.Add("i_mem_pv_bandit3"); //ajouter mais juste 1 bandit maintenant
+                        
+            DeleteList.Add("i_mem_pv_bandit4"); //ajouter mais juste 1 bandit maintenant
             return DeleteList;
         }
     }
