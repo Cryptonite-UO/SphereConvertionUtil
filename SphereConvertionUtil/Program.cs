@@ -44,17 +44,17 @@ namespace SphereConvertionUtil
             ConvertHouse();
             WriteTofile("/sphereworld_new.scp", SphereObjs);
 
-            Console.WriteLine("Terminé ;) pour sphereworld.scp");
-            
-            //SphereChars.scp TODO: lire les deux fichier dans la method 
-            AskFilePath("spherechars.scp");
+            Console.WriteLine("sphereworld.scp convertie.");
+
+            Console.WriteLine("Ouverture de spharechars.scp");
+            file = dirpath+ "/spherechars.scp";
             SphereObjs = new List<SphereSaveObj>();
             PhaseToObj();
 
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            //CleanItems();
+            CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
@@ -76,12 +76,7 @@ namespace SphereConvertionUtil
         private static void PhaseToObj()
         {
             bool found = false;
-            dirpath = Path.GetDirectoryName(file);
-
-            if (true)
-            {
-                Console.WriteLine("Le dossier de base est : " + dirpath);
-            }
+            dirpath = Path.GetDirectoryName(file);//dosier de base
 
             Console.Write("Chargement ... ");
 
@@ -159,23 +154,21 @@ namespace SphereConvertionUtil
         private static void CleanItems()
         {
             Console.Write("Netoyage des items memoire... \n");
-            List<SphereSaveObj> toDelete = new List<SphereSaveObj>();
-            foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
+            int corection = 0;
+            for(int i =0; i < SphereObjs.Count; i++)
             {
+                spin.Turn();
                 foreach (string item in DeleteList)
                 {
-                    if (obj.Id.ToLower() == item.ToLower())
+                    if (SphereObjs[i].Id.ToLower() == item.ToLower())
                     {
-                        toDelete.Add(obj);
+                        SphereObjs.RemoveAt(i);
+                        corection++;
                     }
                 }
             }
 
-            foreach (SphereSaveObj obj in toDelete)
-            {
-                SphereObjs.Remove(obj);
-            }
-            toDelete.Clear();
+            Console.WriteLine($"Nombre de corection memoire {corection}");
         }
 
         private static void ConvertItems()
