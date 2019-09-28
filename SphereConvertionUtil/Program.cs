@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 
 namespace SphereConvertionUtil
 {
@@ -55,7 +54,7 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
 
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            CleanItems();
+            //CleanItems();
             ConvertItems();
             ConvertNpcs();
             ConvertSpawn();
@@ -124,7 +123,6 @@ namespace SphereConvertionUtil
                             {
                                 obj.IsHouse = true;
                             }
-
                         }
                     }
                     SphereObjs.Add(obj);
@@ -425,37 +423,6 @@ namespace SphereConvertionUtil
             Console.WriteLine();
         }
 
-        private static void Traduction(string fileToTranslate = "")
-        {
-            if (fileToTranslate == "")
-            {
-                DirectoryInfo d = new DirectoryInfo(@"/Users/jmmiljours/sphere/scripts");
-                FileInfo[] Files = d.GetFiles("*.scp"); //Getting Text files
-                foreach (FileInfo f in Files)
-                {
-                    File.Move(f.FullName, Path.ChangeExtension(f.FullName, ".org"));
-                    file = f.FullName.Replace(".scp", ".org");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("Fichiers en cours de traduction: {0}", file);
-                    Console.ForegroundColor = ConsoleColor.White;
-                    PhaseSphaereScp();
-                }
-            }
-            else
-            {
-                file = fileToTranslate;
-
-                File.Copy(file, file.Replace(".scp", ".org"), true);
-                file = file.Replace(".scp", ".org");
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Fichiers en cours de traduction: {0}", file);
-                Console.ForegroundColor = ConsoleColor.White;
-                PhaseSphaereSphereMsg();
-            }
-            Console.WriteLine("Dossier Terminé");
-            Console.ReadLine();
-        }
-
         private static void PhaseSphaereScp()
         {
             var newline = "";
@@ -527,15 +494,6 @@ namespace SphereConvertionUtil
 
         }
 
-        public static string Traduire(string text)
-        {
-            string targetLanguage = "fr";
-            string sourceLanguage = "en";
-            var client = Google.Cloud.Translation.V2.TranslationClient.Create();
-            var response = client.TranslateText(text, targetLanguage, sourceLanguage);
-            return response.TranslatedText;
-        }
-
         public static void WriteTofile(Ligne line)
         {
             if (line.IsNewLine)
@@ -582,6 +540,51 @@ namespace SphereConvertionUtil
             File.WriteAllText(filePath, stringbuilder.ToString());
             Console.WriteLine();
         }
+
+        #region Traduction
+
+        private static void Traduction(string fileToTranslate = "")
+        {
+            if (fileToTranslate == "")
+            {
+                DirectoryInfo d = new DirectoryInfo(@"/Users/jmmiljours/sphere/scripts");
+                FileInfo[] Files = d.GetFiles("*.scp"); //Getting Text files
+                foreach (FileInfo f in Files)
+                {
+                    File.Move(f.FullName, Path.ChangeExtension(f.FullName, ".org"));
+                    file = f.FullName.Replace(".scp", ".org");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("Fichiers en cours de traduction: {0}", file);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    PhaseSphaereScp();
+                }
+            }
+            else
+            {
+                file = fileToTranslate;
+
+                File.Copy(file, file.Replace(".scp", ".org"), true);
+                file = file.Replace(".scp", ".org");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Fichiers en cours de traduction: {0}", file);
+                Console.ForegroundColor = ConsoleColor.White;
+                PhaseSphaereSphereMsg();
+            }
+            Console.WriteLine("Dossier Terminé");
+            Console.ReadLine();
+        }
+
+        public static string Traduire(string text)
+        {
+            string targetLanguage = "fr";
+            string sourceLanguage = "en";
+            var client = Google.Cloud.Translation.V2.TranslationClient.Create();
+            var response = client.TranslateText(text, targetLanguage, sourceLanguage);
+            return response.TranslatedText;
+        }
+
+        #endregion
+
     }
 
 }
