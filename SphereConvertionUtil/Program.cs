@@ -33,33 +33,21 @@ namespace SphereConvertionUtil
 
             AskFilePath("sphereworld.scp");
             PhaseToObj();
-
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
-
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            CleanItems();
-            ConvertItems();
-            ConvertNpcs();
-            ConvertSpawn();
+            Optimised();
             ConvertHouse();
             WriteTofile("/sphereworld_new.scp", SphereObjs);
-
             Console.WriteLine("sphereworld.scp convertie.");
-
+            //spherechars.scp
             Console.WriteLine("Ouverture de spharechars.scp");
             file = dirpath+ "/spherechars.scp";
             SphereObjs = new List<SphereSaveObj>();
             PhaseToObj();
-
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
-
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            CleanItems();
-            ConvertItems();
-            ConvertNpcs();
-            ConvertSpawn();
+            Optimised();
             WriteTofile("/spherechars_new.scp", SphereObjs);
-
             Console.WriteLine("Terminé ;) pour spherechars.scp");
 
             Console.ReadLine();
@@ -72,7 +60,6 @@ namespace SphereConvertionUtil
             file = Console.ReadLine();
         }
 
-        //file
         private static void PhaseToObj()
         {
             bool found = false;
@@ -151,13 +138,18 @@ namespace SphereConvertionUtil
             }
         }
 
-        private static void CleanItems()
+        private static void Optimised()
         {
-            Console.Write("Netoyage des items memoire... \n");
+            Console.Write("Coversion en cour ... \n");
+
             int corection = 0;
-            for(int i =0; i < SphereObjs.Count; i++)
+
+            for (int i = 0; i < SphereObjs.Count; i++)
             {
                 spin.Turn();
+
+                #region toDel
+
                 foreach (string item in DeleteList)
                 {
                     if (SphereObjs[i].Id.ToLower() == item.ToLower())
@@ -166,88 +158,81 @@ namespace SphereConvertionUtil
                         corection++;
                     }
                 }
-            }
 
-            Console.WriteLine($"Nombre de corection memoire {corection}");
-        }
+                #endregion
 
-        private static void ConvertItems()
-        {
-            Console.Write("Correction des ID et Disip des Items... \n");
-            foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDITEM"))
-            {
+                #region Items
+
                 foreach (KeyValuePair<string, string> kvp in Items)
                 {
-                    if (obj.Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
+                    if (SphereObjs[i].Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                     {
-                        obj.Id = kvp.Value;
+                        SphereObjs[i].Id = kvp.Value;
                         //Cherche et Remplace au DISPID
-                        foreach (string[] prop in obj.Props)
+                        foreach (string[] prop in SphereObjs[i].Props)
                         {
                             if (prop[0] == "DISPID")
                             {
                                 prop[1] = kvp.Value;
+                                corection++;
                             }
                         }
                     }
                 }
-            }
-        }
 
-        private static void ConvertNpcs()
-        {
-            Console.Write("Correction des ID et ACTION des Npcs... ");
-            foreach (SphereSaveObj obj in SphereObjs.Where(t => t.Type == "WORLDCHAR"))
-            {
-                spin.Turn();
+                #endregion
+
+                #region ID et ACTION
+
+                //Console.Write("Correction des des Npcs... ");
                 foreach (KeyValuePair<string, string> kvp in Npcs)
-                {
-                    if (obj.Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                     {
-                        obj.Id = kvp.Value;
-                        obj.EditedId = true;
-                    }
-                }
-
-                //fix action 070 -> 111 merci @Jhobean
-                foreach (string[] prop in obj.Props)
-                {
-                    if (prop[0] == "ACTION")
-                    {
-                        if (prop[1] == "070")
+                        if (SphereObjs[i].Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                         {
-                            prop[1] = "111";
+                        SphereObjs[i].Id = kvp.Value;
+                        SphereObjs[i].EditedId = true;
+                        corection++;
                         }
                     }
-                }
 
-                if (!obj.EditedId)
+                //fix action 070 -> 111 merci @Jhobean
+                foreach (string[] prop in SphereObjs[i].Props)
+                    {
+                        if (prop[0] == "ACTION")
+                        {
+                            if (prop[1] == "070")
+                            { 
+                                prop[1] = "111";
+                                corection++;
+                            }
+                        }
+                    }
+
+                if (!SphereObjs[i].EditedId)
                 {
-                    if (obj.Id.ToLower().Contains("c_a_"))
+                    if (SphereObjs[i].Id.ToLower().Contains("c_a_"))
                     {
-                        obj.Id = Regex.Replace(obj.Id, "c_a_", "c_", RegexOptions.IgnoreCase);
+                        SphereObjs[i].Id = Regex.Replace(SphereObjs[i].Id, "c_a_", "c_", RegexOptions.IgnoreCase);
+                        corection++;
                     }
-                    if (obj.Id.ToLower().Contains("c_h_"))
+                    if (SphereObjs[i].Id.ToLower().Contains("c_h_"))
                     {
-                        obj.Id = Regex.Replace(obj.Id, "c_h_", "c_", RegexOptions.IgnoreCase);
+                        SphereObjs[i].Id = Regex.Replace(SphereObjs[i].Id, "c_h_", "c_", RegexOptions.IgnoreCase);
+                        corection++;
                     }
-                    if (obj.Id.ToLower().Contains("c_m_"))
+                    if (SphereObjs[i].Id.ToLower().Contains("c_m_"))
                     {
-                        obj.Id = Regex.Replace(obj.Id, "c_m_", "c_", RegexOptions.IgnoreCase);
+                        SphereObjs[i].Id = Regex.Replace(SphereObjs[i].Id, "c_m_", "c_", RegexOptions.IgnoreCase);
+                        corection++;
                     }
                 }
-            }
-            Console.WriteLine();
-        }
 
-        private static void ConvertSpawn()
-        {
-            Console.Write("Correction des MORE, Npcs,Types, Deeds et Items... ");
-            foreach (SphereSaveObj obj in SphereObjs)
-            {
-                spin.Turn();
-                int i = 0;
-                foreach (string[] prop in obj.Props)
+                #endregion
+
+                #region Correction des MORE, Npcs,Types, Deeds et Items...
+
+                int p = 0;
+                foreach (string[] prop in SphereObjs[i].Props)
                 {
                     if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY" || prop[0] == "TYPE")
                     {
@@ -255,7 +240,8 @@ namespace SphereConvertionUtil
                         {
                             if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
-                                obj.Props[i][1] = obj.Props[i][1].Replace(kvp.Key, kvp.Value);
+                                SphereObjs[i].Props[p][1] = SphereObjs[i].Props[p][1].Replace(kvp.Key, kvp.Value);
+                                corection++;
                             }
                         }
 
@@ -263,8 +249,9 @@ namespace SphereConvertionUtil
                         {
                             if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
-                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
-                                obj.EditedMore = true;
+                                SphereObjs[i].Props[p][1] = Regex.Replace(SphereObjs[i].Props[p][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
+                                SphereObjs[i].EditedMore = true;
+                                corection++;
                             }
                         }
 
@@ -272,32 +259,40 @@ namespace SphereConvertionUtil
                         {
                             if (prop[1].ToLower() == kvp.Key.ToLower() && kvp.Value != "")
                             {
-                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
+                                SphereObjs[i].Props[p][1] = Regex.Replace(SphereObjs[i].Props[p][1], kvp.Key, kvp.Value, RegexOptions.IgnoreCase);
+                                corection++;
                             }
                         }
 
-                        if (!obj.EditedMore)
+                        if (!SphereObjs[i].EditedMore)
                         {
                             if (prop[1].ToLower().Contains("c_a_"))
                             {
-                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_a_", "c_", RegexOptions.IgnoreCase);
+                                SphereObjs[i].Props[p][1] = Regex.Replace(SphereObjs[i].Props[p][1], "c_a_", "c_", RegexOptions.IgnoreCase);
+                                corection++;
                             }
 
                             if (prop[1].ToLower().Contains("c_h_"))
                             {
-                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_h_", "c_", RegexOptions.IgnoreCase);
+                                SphereObjs[i].Props[p][1] = Regex.Replace(SphereObjs[i].Props[p][1], "c_h_", "c_", RegexOptions.IgnoreCase);
+                                corection++;
                             }
 
                             if (prop[1].ToLower().Contains("c_m_"))
                             {
-                                obj.Props[i][1] = Regex.Replace(obj.Props[i][1], "c_m_", "c_", RegexOptions.IgnoreCase);
+                                SphereObjs[i].Props[p][1] = Regex.Replace(SphereObjs[i].Props[p][1], "c_m_", "c_", RegexOptions.IgnoreCase);
+                                corection++;
                             }
                         }
                     }
-                    i++;
+                    p++;
                 }
+
+                #endregion
+
             }
-            Console.WriteLine();
+
+            Console.WriteLine($"Nombre de corection effectuer {corection}");
         }
 
         private static void ConvertHouse()
@@ -437,38 +432,6 @@ namespace SphereConvertionUtil
             }
         }
 
-        private static void PhaseSphaereSphereMsg()
-        {
-            var newline = "";
-            foreach (string line in File.ReadAllLines(file))
-            {
-                newline = line;
-
-                if (line.StartsWith(@"//", StringComparison.Ordinal))
-                {
-                    var linetoEdit = line.Split("\t");
-                    if (linetoEdit.Count() > 1)
-                    {
-                        if (!String.IsNullOrEmpty(linetoEdit[linetoEdit.Count() - 1]))
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            //Console.WriteLine(string.Format("Nom original: {0}", linetoEdit[linetoEdit.Count() - 1]));
-                            linetoEdit[linetoEdit.Count() - 1] = Traduire(linetoEdit[linetoEdit.Count() - 1]);
-                            newline = string.Join("\t", linetoEdit.Skip(0));
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine(newline);
-                            Console.ForegroundColor = ConsoleColor.White;
-
-                        }
-                    }
-                }
-
-                AddLine(newline);
-            }
-            Write();
-        }
-
-
         public static void AddLine(string text, bool newline = true)
         {
             linesTowrite.Add(new Ligne(text, newline));
@@ -565,6 +528,37 @@ namespace SphereConvertionUtil
             }
             Console.WriteLine("Dossier Terminé");
             Console.ReadLine();
+        }
+
+        private static void PhaseSphaereSphereMsg()
+        {
+            var newline = "";
+            foreach (string line in File.ReadAllLines(file))
+            {
+                newline = line;
+
+                if (line.StartsWith(@"//", StringComparison.Ordinal))
+                {
+                    var linetoEdit = line.Split("\t");
+                    if (linetoEdit.Count() > 1)
+                    {
+                        if (!String.IsNullOrEmpty(linetoEdit[linetoEdit.Count() - 1]))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            //Console.WriteLine(string.Format("Nom original: {0}", linetoEdit[linetoEdit.Count() - 1]));
+                            linetoEdit[linetoEdit.Count() - 1] = Traduire(linetoEdit[linetoEdit.Count() - 1]);
+                            newline = string.Join("\t", linetoEdit.Skip(0));
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine(newline);
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+                    }
+                }
+
+                AddLine(newline);
+            }
+            Write();
         }
 
         public static string Traduire(string text)
