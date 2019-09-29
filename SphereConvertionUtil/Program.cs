@@ -140,7 +140,7 @@ namespace SphereConvertionUtil
 
         private static void Optimised()
         {
-            Console.Write("Coversion en cour ... \n");
+            Console.Write($"{DateTime.Now.ToString("HH:mm")} : Conversion en cour ... \n");
 
             int corection = 0;
 
@@ -292,7 +292,7 @@ namespace SphereConvertionUtil
 
             }
 
-            Console.WriteLine($"Nombre de corection effectuer {corection}");
+            Console.WriteLine($"{DateTime.Now.ToString("HH:mm")} : Nombre de corection effectuer {corection}");
         }
 
         private static void ConvertHouse()
