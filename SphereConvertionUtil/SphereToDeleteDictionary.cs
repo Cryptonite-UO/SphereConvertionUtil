@@ -68,6 +68,9 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_pv_bandit3"); //ajouter mais juste 1 bandit maintenant
                         
             DeleteList.Add("i_mem_pv_bandit4"); //ajouter mais juste 1 bandit maintenant
+
+            DeleteList.Add("i_travel_timer");
+
             return DeleteList;
         }
     }

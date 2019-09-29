@@ -144,22 +144,23 @@ namespace SphereConvertionUtil
 
             int corection = 0;
 
+            #region toDel
+
+            foreach (string item in DeleteList)
+            {
+                spin.Turn();
+                corection += SphereObjs.RemoveAll(x => x.Id.ToLower() == item.ToLower());
+            }
+
+            Console.WriteLine($"Nombre d'objects suprimer: {corection}");
+
+            corection = 0;
+
+            #endregion
+
             for (int i = 0; i < SphereObjs.Count; i++)
             {
                 spin.Turn();
-
-                #region toDel
-
-                foreach (string item in DeleteList)
-                {
-                    if (SphereObjs[i].Id.ToLower() == item.ToLower())
-                    {
-                        SphereObjs.RemoveAt(i);
-                        corection++;
-                    }
-                }
-
-                #endregion
 
                 #region Items
 
