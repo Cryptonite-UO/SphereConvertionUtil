@@ -23,6 +23,8 @@ namespace SphereConvertionUtil
 
         private static bool ShowDupe = false;
 
+        private static int goldAmount = 0;
+
         static void Main(string[] args)
         {
             //pour Google Translate
@@ -49,6 +51,7 @@ namespace SphereConvertionUtil
             Optimised();
             WriteTofile("/spherechars_new.scp", SphereObjs);
             Console.WriteLine("spherechars.scp convertie.");
+            Console.WriteLine($"Quantiter d'or en jeu: {goldAmount.ToString("#,##0")} !");
             Console.WriteLine("Opération terminer.");
 
             Console.ReadLine();
@@ -144,6 +147,24 @@ namespace SphereConvertionUtil
             Console.Write($"{DateTime.Now.ToString("HH:mm")} : Conversion en cour ... \n");
 
             int corection = 0;
+            #region Total Gold
+
+            var t = from obj in SphereObjs
+                    where obj.Id == "i_gold"
+                    select obj;
+
+            foreach(SphereSaveObj o in t)
+            {
+                foreach (string[] prop in o.Props)
+                {
+                    if(prop[0]== "AMOUNT")
+                    {
+                        goldAmount += int.Parse(prop[1]);
+                    }
+                }
+            }
+
+            #endregion
 
             #region Duplicate
 
