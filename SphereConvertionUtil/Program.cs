@@ -10,16 +10,16 @@ namespace SphereConvertionUtil
     class Program
     {
 
-        private static Dictionary<string, string> Houses = SphereHousesDictionary.Init();
-        private static Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
-        private static Dictionary<string, string> Items = SphereItemsDictionary.Init();
-        private static Dictionary<string, string> Types = SphereTypesDictionary.Init();
-        private static List<string> DeleteList = SphereToDeleteDictionary.Init();
+        private static readonly Dictionary<string, string> Houses = SphereHousesDictionary.Init();
+        private static readonly Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
+        private static readonly Dictionary<string, string> Items = SphereItemsDictionary.Init();
+        private static readonly Dictionary<string, string> Types = SphereTypesDictionary.Init();
+        private static readonly List<string> DeleteList = SphereToDeleteDictionary.Init();
         private static string file = "";
         private static string dirpath = "";
-        private static List<Ligne> linesTowrite = new List<Ligne>();
+        private static readonly List<Ligne> linesTowrite = new List<Ligne>();
         private static List<SphereSaveObj> SphereObjs = new List<SphereSaveObj>();
-        private static ConsoleSpiner spin = new ConsoleSpiner();
+        private static readonly ConsoleSpiner spin = new ConsoleSpiner();
         private static string Headers = "";
 
         static void Main(string[] args)
