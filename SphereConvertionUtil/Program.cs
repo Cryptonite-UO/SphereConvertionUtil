@@ -44,11 +44,11 @@ namespace SphereConvertionUtil
             file = dirpath+ "/spherechars.scp";
             SphereObjs = new List<SphereSaveObj>();
             PhaseToObj();
-            Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
             Optimised();
             WriteTofile("/spherechars_new.scp", SphereObjs);
-            Console.WriteLine("Terminé ;) pour spherechars.scp");
+            Console.WriteLine("spherechars.scp convertie.");
+            Console.WriteLine("Opération terminer.");
 
             Console.ReadLine();
         }
