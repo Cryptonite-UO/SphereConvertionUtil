@@ -57,8 +57,6 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_mem_appel");
 
-            DeleteList.Add("i_mana_timer");
-            
             DeleteList.Add("c_npc_quete12_b"); //Ancien NPC requis avec brain beggar
             
             DeleteList.Add("i_mem_pv_bandit1"); //ajouter mais juste 1 bandit maintenant
@@ -70,6 +68,24 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_pv_bandit4"); //ajouter mais juste 1 bandit maintenant
 
             DeleteList.Add("i_travel_timer");
+
+            DeleteList.Add("i_targ_bouclier_protecteur");
+
+            DeleteList.Add("i_arena_random_2v2");
+
+            DeleteList.Add("i_targ_grappintenebre");
+
+            DeleteList.Add("i_targ_customspellartificier2");
+
+            DeleteList.Add("i_mem_appel");
+
+            DeleteList.Add("i_arena_random");
+
+            DeleteList.Add("i_mem_pierre");
+
+            DeleteList.Add("i_mem_customSpellMagicarrow");
+
+            DeleteList.Add("i_mana_timer");
 
             return DeleteList;
         }

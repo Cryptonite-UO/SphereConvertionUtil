@@ -9,7 +9,6 @@ namespace SphereConvertionUtil
 {
     class Program
     {
-
         private static readonly Dictionary<string, string> Houses = SphereHousesDictionary.Init();
         private static readonly Dictionary<string, string> Npcs = SphereNpcsDictionary.Init();
         private static readonly Dictionary<string, string> Items = SphereItemsDictionary.Init();
@@ -21,6 +20,8 @@ namespace SphereConvertionUtil
         private static List<SphereSaveObj> SphereObjs = new List<SphereSaveObj>();
         private static readonly ConsoleSpiner spin = new ConsoleSpiner();
         private static string Headers = "";
+
+        private static bool ShowDupe = false;
 
         static void Main(string[] args)
         {
@@ -144,7 +145,28 @@ namespace SphereConvertionUtil
 
             int corection = 0;
 
-            #region toDel
+            #region Duplicate
+
+            if (ShowDupe)
+            {
+                var q = from x in SphereObjs
+                        group x.Id by x.Id into g
+                        let count = g.Count()
+                        orderby count descending
+                        select new { Value = g.Key, Count = count };
+
+                foreach (var x in q)
+                {
+                    if (x.Count > 100)
+                    {
+                        Console.WriteLine("Value: " + x.Value + " Count: " + x.Count);
+                    }
+                }
+            }
+
+            #endregion
+
+            #region toDelete
 
             foreach (string item in DeleteList)
             {
