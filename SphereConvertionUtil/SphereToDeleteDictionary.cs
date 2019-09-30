@@ -53,16 +53,50 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_mem_appel");
 
-            DeleteList.Add("c_npc_quete12_b"); //Ancien NPC requis avec brain beggar
+            DeleteList.Add("c_npc_quete12_b");
             
-            DeleteList.Add("i_mem_pv_bandit1"); //ajouter mais juste 1 bandit maintenant
+            DeleteList.Add("i_mem_pv_bandit1");
                         
-            DeleteList.Add("i_mem_pv_bandit2"); //ajouter mais juste 1 bandit maintenant
+            DeleteList.Add("i_mem_pv_bandit2");
                         
-            DeleteList.Add("i_mem_pv_bandit3"); //ajouter mais juste 1 bandit maintenant
+            DeleteList.Add("i_mem_pv_bandit3");
                         
-            DeleteList.Add("i_mem_pv_bandit4"); //ajouter mais juste 1 bandit maintenant
-
+            DeleteList.Add("i_mem_pv_bandit4");
+                                    
+            DeleteList.Add("i_mem_pv_prince_of_darkness"); 
+                                                
+            DeleteList.Add("i_mem_pv_dragon_green"); 
+                                                
+            DeleteList.Add("i_mem_pv_wyvern_king"); 
+                                                
+            DeleteList.Add("i_mem_pv_dragon_black"); 
+                                                
+            DeleteList.Add("i_mem_pv_white_wyrm"); 
+                                                
+            DeleteList.Add("i_mem_pv");
+                                                            
+            DeleteList.Add("i_mem_pv_iron_golem"); 
+                                                                        
+            DeleteList.Add("i_mem_pv_elem_earth_shaman"); 
+                                                                        
+            DeleteList.Add("i_mem_pv_balron");
+                                                                                    
+            DeleteList.Add("i_mem_pv_ogre_lord");
+                                                                                    
+            DeleteList.Add("i_mem_pv_wyrm");
+                                                                                    
+            DeleteList.Add("i_mem_pv_sea_serpent");
+                                                                                    
+            DeleteList.Add("i_mem_pv_kraken");
+                                                                                    
+            DeleteList.Add("i_mem_pv_dragon_ice");
+                                                                                                
+            DeleteList.Add("i_mem_pv_red_dragon");
+                                                                                                
+            DeleteList.Add("i_mem_pv_crystal_dragon");
+                                                                                                
+            DeleteList.Add("i_mem_pv_wyvern");
+                                                                                                
             DeleteList.Add("i_travel_timer");
 
             DeleteList.Add("i_targ_bouclier_protecteur");
