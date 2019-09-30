@@ -144,9 +144,10 @@ namespace SphereConvertionUtil
 
         private static void Optimised()
         {
-            Console.Write($"{DateTime.Now.ToString("HH:mm")} : Conversion en cour ... \n");
+            Console.Write($"{DateTime.Now.ToString("HH:mm:ss")} : Conversion en cour ... \n");
 
             int corection = 0;
+
             #region Total Gold
 
             var t = from obj in SphereObjs
@@ -195,9 +196,55 @@ namespace SphereConvertionUtil
                 corection += SphereObjs.RemoveAll(x => x.Id.ToLower() == item.ToLower());
             }
 
-            Console.WriteLine($"Nombre d'objects suprimer: {corection}");
+            Console.WriteLine($"{ DateTime.Now.ToString("HH:mm:ss")} : Nombre d'objects suprimer: {corection}");
 
             corection = 0;
+
+            #endregion
+
+            #region Items-Optimised
+
+            foreach (KeyValuePair<string, string> kvp in Items)
+            {
+                var query = from obj in SphereObjs
+                        where obj.Id.Equals(kvp.Key, StringComparison.OrdinalIgnoreCase)
+                        select obj;
+
+                foreach (SphereSaveObj o in query)
+                {
+                    o.Id = kvp.Value;
+                    foreach (string[] prop in o.Props)
+                    {
+                        if (prop[0] == "DISPID")
+                        {
+                            prop[1] = kvp.Value;
+                            corection++;
+                        }
+                        spin.Turn();
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Npcs-Optimised
+
+            foreach (KeyValuePair<string, string> kvp in Npcs)
+            {
+                var query = from obj in SphereObjs
+                            where obj.Id.Equals(kvp.Key, StringComparison.OrdinalIgnoreCase)
+                            select obj;
+
+                foreach (SphereSaveObj o in query)
+                {
+                    o.Id = kvp.Value;
+                    o.EditedId = true;
+                    corection++;
+                    spin.Turn();
+                }
+            }
+
+            Console.WriteLine($"{ DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection de ID et DISPID: {corection}");
 
             #endregion
 
@@ -205,52 +252,7 @@ namespace SphereConvertionUtil
             {
                 spin.Turn();
 
-                #region Items
-
-                foreach (KeyValuePair<string, string> kvp in Items)
-                {
-                    if (SphereObjs[i].Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
-                    {
-                        SphereObjs[i].Id = kvp.Value;
-                        //Cherche et Remplace au DISPID
-                        foreach (string[] prop in SphereObjs[i].Props)
-                        {
-                            if (prop[0] == "DISPID")
-                            {
-                                prop[1] = kvp.Value;
-                                corection++;
-                            }
-                        }
-                    }
-                }
-
-                #endregion
-
-                #region ID et ACTION
-
-                //Console.Write("Correction des des Npcs... ");
-                foreach (KeyValuePair<string, string> kvp in Npcs)
-                    {
-                        if (SphereObjs[i].Id.ToLower() == kvp.Key.ToLower() && kvp.Value != "")
-                        {
-                        SphereObjs[i].Id = kvp.Value;
-                        SphereObjs[i].EditedId = true;
-                        corection++;
-                        }
-                    }
-
-                //fix action 070 -> 111 merci @Jhobean
-                foreach (string[] prop in SphereObjs[i].Props)
-                    {
-                        if (prop[0] == "ACTION")
-                        {
-                            if (prop[1] == "070")
-                            { 
-                                prop[1] = "111";
-                                corection++;
-                            }
-                        }
-                    }
+                #region Rename-Npc
 
                 if (!SphereObjs[i].EditedId)
                 {
@@ -278,6 +280,15 @@ namespace SphereConvertionUtil
                 int p = 0;
                 foreach (string[] prop in SphereObjs[i].Props)
                 {
+                    //fix action 070 -> 111 merci @Jhobean
+                    if (prop[0] == "ACTION")
+                    {
+                        if (prop[1] == "070")
+                        {
+                            prop[1] = "111";
+                            corection++;
+                        }
+                    }
                     if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY" || prop[0] == "TYPE")
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
@@ -336,7 +347,7 @@ namespace SphereConvertionUtil
 
             }
 
-            Console.WriteLine($"{DateTime.Now.ToString("HH:mm")} : Nombre de corection effectuer {corection}");
+            Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection MORE1,MORE2,OBODY,TYPE et ACTION: {corection}");
         }
 
         private static void ConvertHouse()
@@ -455,57 +466,6 @@ namespace SphereConvertionUtil
             Console.WriteLine();
         }
 
-        private static void PhaseSphaereScp()
-        {
-            var newline = "";
-            foreach (string line in File.ReadAllLines(file))
-            {
-                newline = line;
-
-                if (line.StartsWith("NAME=", StringComparison.Ordinal))
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(string.Format("Nom original: {0}", line.Remove(0, 5)));
-                    newline = string.Format("NAME={0}", Traduire(line.Remove(0, 5)));
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine(string.Format("Traduction : {0}", newline.Remove(0, 5)));
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-
-                AddLine(newline);
-            }
-        }
-
-        public static void AddLine(string text, bool newline = true)
-        {
-            linesTowrite.Add(new Ligne(text, newline));
-        }
-
-        public static void Write()
-        {
-            Console.WriteLine("Écriture du nouveau fichier en cours, patienter ...");
-
-            foreach (Ligne l in linesTowrite)
-            {
-                WriteTofile(l);
-            }
-
-            Console.WriteLine("Opération Terminée");
-
-        }
-
-        public static void WriteTofile(Ligne line)
-        {
-            if (line.IsNewLine)
-            {
-                File.AppendAllText(file.Replace(".org", ".scp"), line.Text + Environment.NewLine, Encoding.GetEncoding("iso-8859-1"));
-            }
-            else
-            {
-                File.AppendAllText(file.Replace(".org", ".scp"), line.Text, Encoding.GetEncoding("iso-8859-1"));
-            }
-        }
-
         public static void WriteTofile(string fileName, List<SphereSaveObj> objs)
         {
             int objnum = 0;
@@ -612,6 +572,56 @@ namespace SphereConvertionUtil
             var client = Google.Cloud.Translation.V2.TranslationClient.Create();
             var response = client.TranslateText(text, targetLanguage, sourceLanguage);
             return response.TranslatedText;
+        }
+
+        private static void PhaseSphaereScp()
+        {
+            var newline = "";
+            foreach (string line in File.ReadAllLines(file))
+            {
+                newline = line;
+
+                if (line.StartsWith("NAME=", StringComparison.Ordinal))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(string.Format("Nom original: {0}", line.Remove(0, 5)));
+                    newline = string.Format("NAME={0}", Traduire(line.Remove(0, 5)));
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(string.Format("Traduction : {0}", newline.Remove(0, 5)));
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
+                AddLine(newline);
+            }
+        }
+
+        public static void AddLine(string text, bool newline = true)
+        {
+            linesTowrite.Add(new Ligne(text, newline));
+        }
+
+        public static void Write()
+        {
+            Console.WriteLine("Écriture du nouveau fichier en cours, patienter ...");
+
+            foreach (Ligne l in linesTowrite)
+            {
+                WriteTofile(l);
+            }
+
+            Console.WriteLine("Opération Terminée");
+        }
+
+        public static void WriteTofile(Ligne line)
+        {
+            if (line.IsNewLine)
+            {
+                File.AppendAllText(file.Replace(".org", ".scp"), line.Text + Environment.NewLine, Encoding.GetEncoding("iso-8859-1"));
+            }
+            else
+            {
+                File.AppendAllText(file.Replace(".org", ".scp"), line.Text, Encoding.GetEncoding("iso-8859-1"));
+            }
         }
 
         #endregion
