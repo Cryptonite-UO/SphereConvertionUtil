@@ -247,10 +247,15 @@ namespace SphereConvertionUtil
             Console.WriteLine($"{ DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection de ID et DISPID: {corection}");
 
             #endregion
-
             for (int i = 0; i < SphereObjs.Count; i++)
             {
-                spin.Turn();
+                //spin.Turn();
+                var a = (double)i / SphereObjs.Count;
+                if (i % 1000 == 1)
+                {
+                    Console.Write(a.ToString("P"));
+                    Console.SetCursorPosition(Console.CursorLeft - a.ToString("P").Count(), Console.CursorTop);
+                }
 
                 #region Rename-Npc
 
@@ -353,9 +358,16 @@ namespace SphereConvertionUtil
         private static void ConvertHouse()
         {
             Console.Write("Correction des Maisons... ");
-            foreach (SphereSaveObj obj in SphereObjs.Where(h => h.IsHouse))
+            int l = 0;
+            var colection = SphereObjs.Where(h => h.IsHouse);
+            foreach (SphereSaveObj obj in colection)
             {
-                spin.Turn();
+                var a = (double)l/ colection.Count();
+                if (l % 30 == 1)
+                {
+                    Console.Write(a.ToString("P"));
+                    Console.SetCursorPosition(Console.CursorLeft - a.ToString("P").Count(), Console.CursorTop);
+                }
                 string serial = "";
                 string more1 = "";
                 int i = 0;
@@ -462,6 +474,7 @@ namespace SphereConvertionUtil
                     string[] locked = { "EVENTS", "t_locked" };
                     item.Props.Add(locked);
                 }
+                l++;
             }
             Console.WriteLine();
         }
