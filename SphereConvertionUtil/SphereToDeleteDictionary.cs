@@ -116,6 +116,10 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_customSpellMagicarrow");
 
             DeleteList.Add("i_mana_timer");
+            
+            DeleteList.Add("i_crystal_entrainement_mage");
+            
+            DeleteList.Add("i_crystal_entrainement_druide");
 
             return DeleteList;
         }
