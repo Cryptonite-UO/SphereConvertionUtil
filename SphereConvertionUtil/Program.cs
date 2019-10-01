@@ -38,20 +38,20 @@ namespace SphereConvertionUtil
             PhaseToObj();
             Console.WriteLine(string.Format("Nombre de maisons: {0}", SphereObjs.Where(o => o.IsHouse).Count()));
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            Optimised();
+            Converter();
             ConvertHouse();
             WriteTofile("/sphereworld_new.scp", SphereObjs);
             Console.WriteLine("sphereworld.scp convertie.");
             //spherechars.scp
             Console.WriteLine("Ouverture de spharechars.scp");
-            file = dirpath+ "/spherechars.scp";
+            file = dirpath + "/spherechars.scp";
             SphereObjs = new List<SphereSaveObj>();
             PhaseToObj();
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
-            Optimised();
+            Converter();
             WriteTofile("/spherechars_new.scp", SphereObjs);
             Console.WriteLine("spherechars.scp convertie.");
-            Console.WriteLine($"Quantiter d'or en jeu: {goldAmount.ToString("#,##0")} !");
+            Console.WriteLine($"Quantité d'or en jeu: {goldAmount.ToString("#,##0")} !");
             Console.WriteLine("Opération terminer.");
 
             Console.ReadLine();
@@ -142,7 +142,7 @@ namespace SphereConvertionUtil
             }
         }
 
-        private static void Optimised()
+        private static void Converter()
         {
             Console.Write($"{DateTime.Now.ToString("HH:mm:ss")} : Conversion en cour ... \n");
 
@@ -188,7 +188,7 @@ namespace SphereConvertionUtil
 
             #endregion
 
-            #region toDelete
+            #region Objects-a-Suprimer
 
             foreach (string item in DeleteList)
             {
@@ -247,14 +247,18 @@ namespace SphereConvertionUtil
             Console.WriteLine($"{ DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection de ID et DISPID: {corection}");
 
             #endregion
+
+            #region AllObjects-Loop
+
             for (int i = 0; i < SphereObjs.Count; i++)
             {
                 //spin.Turn();
-                var a = (double)i / SphereObjs.Count;
+                double progress = (double)i / SphereObjs.Count;
                 if (i % 1000 == 1)
                 {
-                    Console.Write(a.ToString("P"));
-                    Console.SetCursorPosition(Console.CursorLeft - a.ToString("P").Count(), Console.CursorTop);
+                    var txt = progress.ToString("P");
+                    Console.Write(txt);
+                    Console.SetCursorPosition(Console.CursorLeft - txt.Length, Console.CursorTop);
                 }
 
                 #region Rename-Npc
@@ -352,22 +356,27 @@ namespace SphereConvertionUtil
 
             }
 
+            #endregion
+
             Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection MORE1,MORE2,OBODY,TYPE et ACTION: {corection}");
         }
 
         private static void ConvertHouse()
         {
             Console.Write("Correction des Maisons... ");
-            int l = 0;
+            int loading = 0;
             var colection = SphereObjs.Where(h => h.IsHouse);
+
             foreach (SphereSaveObj obj in colection)
             {
-                var a = (double)l/ colection.Count();
-                if (l % 30 == 1)
+                var progress = (double)loading / colection.Count();
+                if (loading % 3 == 1)
                 {
-                    Console.Write(a.ToString("P"));
-                    Console.SetCursorPosition(Console.CursorLeft - a.ToString("P").Count(), Console.CursorTop);
+                    var txt = progress.ToString("P");
+                    Console.Write(txt);
+                    Console.SetCursorPosition(Console.CursorLeft - txt.Length, Console.CursorTop);
                 }
+
                 string serial = "";
                 string more1 = "";
                 int i = 0;
@@ -474,7 +483,7 @@ namespace SphereConvertionUtil
                     string[] locked = { "EVENTS", "t_locked" };
                     item.Props.Add(locked);
                 }
-                l++;
+                loading++;
             }
             Console.WriteLine();
         }
