@@ -262,6 +262,39 @@ namespace SphereConvertionUtil
             Items.Add("i_nains_montagnes_stone", "i_stone_race_nain");
             Items.Add("i_gnomes_bois_stone", "i_stone_race_gnome");
             /////////// FIN///////////
+            ///
+
+            ///////MAP///////
+            Items.Add("i_map_STOCK_1", "i_map_city");
+            Items.Add("i_map_STOCK_2", "i_map_city");
+            Items.Add("i_map_STOCK_3", "i_map_city");
+            Items.Add("i_map_STOCK_4", "i_map_city");
+            Items.Add("i_map_STOCK_5", "i_map_city");
+            Items.Add("i_map_STOCK_6", "i_map_city");
+            Items.Add("i_map_STOCK_7", "i_map_city");
+            Items.Add("i_map_STOCK_8", "i_map_city");
+            Items.Add("i_map_STOCK_9", "i_map_city");
+            Items.Add("i_map_STOCK_10", "i_map_city");
+            Items.Add("i_map_STOCK_11", "i_map_city");
+            Items.Add("i_map_STOCK_12", "i_map_city");
+            Items.Add("i_map_STOCK_13", "i_map_city");
+            Items.Add("i_map_STOCK_14", "i_map_city");
+            Items.Add("i_map_STOCK_15", "i_map_city");
+            Items.Add("i_map_STOCK_16", "i_map_city");
+            Items.Add("i_map_STOCK_17", "i_map_city");
+            Items.Add("i_map_STOCK_18", "i_map_city");
+            Items.Add("i_map_STOCK_19", "i_map_city");
+            Items.Add("i_map_STOCK_20", "i_map_city");
+            Items.Add("i_map_STOCK_21", "i_map_city");
+            Items.Add("i_map_STOCK_22", "i_map_city");
+            Items.Add("i_map_STOCK_23", "i_map_city");
+            Items.Add("i_map_STOCK_24", "i_map_city");
+            Items.Add("i_map_STOCK_25", "i_map_city");
+            Items.Add("i_map_STOCK_26", "i_map_city");
+            Items.Add("i_map_STOCK_27", "i_map_city");
+            Items.Add("i_map_STOCK_28", "i_map_world");
+            /////////FIN MAP////////////////
+
 
             return Items;
         }

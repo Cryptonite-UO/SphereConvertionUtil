@@ -20,6 +20,16 @@ namespace SphereConvertionUtil
 
             Types.Add("T_L5MAP", "t_map");
 
+            Types.Add("T_L1MAP_CHEST", "t_normal");
+
+            Types.Add("T_L2MAP_CHEST", "t_normal");
+
+            Types.Add("T_L3MAP_CHEST", "t_normal");
+
+            Types.Add("T_L4MAP_CHEST", "t_normal");
+
+            Types.Add("T_L5MAP_CHEST", "t_normal");
+
             return Types;
         }
     }

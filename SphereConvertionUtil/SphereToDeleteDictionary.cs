@@ -121,6 +121,73 @@ namespace SphereConvertionUtil
             
             DeleteList.Add("i_crystal_entrainement_druide");
 
+            DeleteList.Add("i_targ_shieldbash");
+
+            DeleteList.Add("I_M_BEAR_Aventurier");
+
+            DeleteList.Add("i_protection_paladin1");
+
+            DeleteList.Add("i_protection_paladin2");
+
+            DeleteList.Add("i_protection_paladin3");
+
+            DeleteList.Add("i_protection_paladin4");
+
+            DeleteList.Add("i_protection_paladin5");
+
+            DeleteList.Add("i_protection_paladin6");
+
+            DeleteList.Add("i_protection_paladin7");
+
+            DeleteList.Add("i_protection_paladin8");
+
+            DeleteList.Add("i_protection_paladin9");
+
+            DeleteList.Add("i_protection_paladin10");
+
+            DeleteList.Add("i_staff_exp");
+
+            DeleteList.Add("I_M_BEAR_S");
+
+            DeleteList.Add("I_M_BEAR_S");
+
+            DeleteList.Add("i_targ_bouclierterre");
+
+            DeleteList.Add("i_staff_quest_attribue");
+
+            DeleteList.Add("i_mystique_baton_vent");
+
+            DeleteList.Add("i_mystique_baton_Glace");
+
+            DeleteList.Add("i_jambe_mystique_vent");
+
+            DeleteList.Add("i_jambe_mystique_Glace");
+
+            DeleteList.Add("i_torse_mystique_vent");
+
+            DeleteList.Add("i_torse_mystique_Glace");
+
+            DeleteList.Add("i_mystique_baton_feu");
+
+            DeleteList.Add("i_torse_mystique_Feu");
+
+            DeleteList.Add("i_jambe_mystique_feu");
+
+            DeleteList.Add("i_et_ed");
+
+            DeleteList.Add("i_pierre_log");
+
+            DeleteList.Add("i_disconnect");
+
+            DeleteList.Add("i_spawn_chimere");
+
+
+
+
+
+
+
+
             return DeleteList;
         }
     }
