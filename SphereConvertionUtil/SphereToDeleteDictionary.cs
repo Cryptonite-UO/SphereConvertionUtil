@@ -96,6 +96,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_pv_crystal_dragon");
                                                                                                 
             DeleteList.Add("i_mem_pv_wyvern");
+                                                                                                                
+            DeleteList.Add("i_mem_pv_balrog");
                                                                                                 
             DeleteList.Add("i_travel_timer");
 
