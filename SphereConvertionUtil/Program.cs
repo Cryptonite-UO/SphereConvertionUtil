@@ -41,7 +41,7 @@ namespace SphereConvertionUtil
             Converter();
             ConvertHouse();
             WriteTofile("/sphereworld_new.scp", SphereObjs);
-            Console.WriteLine("sphereworld.scp convertie.");
+            Console.WriteLine("sphereworld.scp converti.");
             //spherechars.scp
             Console.WriteLine("Ouverture de spharechars.scp");
             file = dirpath + "/spherechars.scp";
@@ -50,9 +50,9 @@ namespace SphereConvertionUtil
             Console.WriteLine(string.Format("Nombre d'objets : {0}", SphereObjs.Count()));
             Converter();
             WriteTofile("/spherechars_new.scp", SphereObjs);
-            Console.WriteLine("spherechars.scp convertie.");
+            Console.WriteLine("spherechars.scp converti.");
             Console.WriteLine($"Quantité d'or en jeu: {goldAmount.ToString("#,##0")} !");
-            Console.WriteLine("Opération terminer.");
+            Console.WriteLine("Opération terminée.");
 
             Console.ReadLine();
         }
@@ -144,7 +144,7 @@ namespace SphereConvertionUtil
 
         private static void Converter()
         {
-            Console.Write($"{DateTime.Now.ToString("HH:mm:ss")} : Conversion en cour ... \n");
+            Console.Write($"{DateTime.Now.ToString("HH:mm:ss")} : Conversion en cours... \n");
 
             int corection = 0;
 
@@ -358,7 +358,7 @@ namespace SphereConvertionUtil
 
             #endregion
 
-            Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de corection MORE1,MORE2,OBODY,TYPE et ACTION: {corection}");
+            Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de correction MORE1, MORE2, OBODY, TYPE et ACTION: {corection}");
         }
 
         private static void ConvertHouse()
