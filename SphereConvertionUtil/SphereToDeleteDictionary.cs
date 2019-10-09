@@ -184,6 +184,50 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_spawn_chimere");
 
             DeleteList.Add("i_mem_customspellfireballartificier");
+            
+            DeleteList.Add("i_targ_BLOCK_RP");
+            DeleteList.Add("i_targ_animateur_RP");
+            DeleteList.Add("i_targ_analyse_cote_RP");
+            DeleteList.Add("i_targ_cote_rp1");
+            DeleteList.Add("i_targ_cote_rp2");
+            DeleteList.Add("i_targ_cote_rp3");
+            DeleteList.Add("i_targ_RP3H");
+            DeleteList.Add("i_targ_RP6H");
+            DeleteList.Add("i_targ_RP12H");
+            DeleteList.Add("i_targ_RP24H");
+            DeleteList.Add("i_targ_RP48H");
+            DeleteList.Add("i_targ_RP72H");
+            DeleteList.Add("i_targ_RP1sem");
+            DeleteList.Add("i_mem_RP_3h_COTE1");
+            DeleteList.Add("i_mem_RP_3h_COTE2");
+            DeleteList.Add("i_mem_RP_3h_COTE3");
+            DeleteList.Add("i_mem_RP_6h_COTE1");
+            DeleteList.Add("i_mem_RP_6h_COTE2");
+            DeleteList.Add("i_mem_RP_6h_COTE3");
+            DeleteList.Add("i_mem_RP_12h_COTE1");
+            DeleteList.Add("i_mem_RP_12h_COTE2");
+            DeleteList.Add("i_mem_RP_12h_COTE3");            
+            DeleteList.Add("i_mem_RP_24h_COTE1");
+            DeleteList.Add("i_mem_RP_24h_COTE2");
+            DeleteList.Add("i_mem_RP_24h_COTE3");
+            DeleteList.Add("i_mem_RP_48_COTE1");
+            DeleteList.Add("i_mem_RP_48_COTE2");
+            DeleteList.Add("i_mem_RP_48_COTE3");
+            DeleteList.Add("i_mem_RP_72_COTE1");
+            DeleteList.Add("i_mem_RP_72_COTE2");
+            DeleteList.Add("i_mem_RP_72_COTE3");
+            DeleteList.Add("i_mem_RP_1sem_COTE1");
+            DeleteList.Add("i_mem_RP_1sem_COTE2");
+            DeleteList.Add("i_mem_RP_1sem_COTE3");
+            DeleteList.Add("I_MEM_RP_TRIGGER_3H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_6H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_12H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_24H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_48H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_72H");
+            DeleteList.Add("I_MEM_RP_TRIGGER_1sem");
+            
+
 
 
 
