@@ -210,12 +210,12 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_RP_24h_COTE1");
             DeleteList.Add("i_mem_RP_24h_COTE2");
             DeleteList.Add("i_mem_RP_24h_COTE3");
-            DeleteList.Add("i_mem_RP_48_COTE1");
-            DeleteList.Add("i_mem_RP_48_COTE2");
-            DeleteList.Add("i_mem_RP_48_COTE3");
-            DeleteList.Add("i_mem_RP_72_COTE1");
-            DeleteList.Add("i_mem_RP_72_COTE2");
-            DeleteList.Add("i_mem_RP_72_COTE3");
+            DeleteList.Add("i_mem_RP_48h_COTE1");
+            DeleteList.Add("i_mem_RP_48h_COTE2");
+            DeleteList.Add("i_mem_RP_48h_COTE3");
+            DeleteList.Add("i_mem_RP_72h_COTE1");
+            DeleteList.Add("i_mem_RP_72h_COTE2");
+            DeleteList.Add("i_mem_RP_72h_COTE3");
             DeleteList.Add("i_mem_RP_1sem_COTE1");
             DeleteList.Add("i_mem_RP_1sem_COTE2");
             DeleteList.Add("i_mem_RP_1sem_COTE3");
