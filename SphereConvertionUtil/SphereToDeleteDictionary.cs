@@ -183,6 +183,8 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_spawn_chimere");
 
+            DeleteList.Add("i_mem_customspellfireballartificier");
+
 
 
 
