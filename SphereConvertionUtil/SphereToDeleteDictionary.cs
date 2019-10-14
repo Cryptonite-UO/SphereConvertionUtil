@@ -227,9 +227,12 @@ namespace SphereConvertionUtil
             DeleteList.Add("I_MEM_RP_TRIGGER_72H");
             DeleteList.Add("I_MEM_RP_TRIGGER_1sem");
 
-            DeleteList.Add("i_delog_timer");
+            DeleteList.Add("i_delog_timer"); 
 
-            
+            DeleteList.Add("i_targ_lancerhache");
+            DeleteList.Add("i_mem_lancerhache"); 
+            DeleteList.Add("i_shieldbash");
+
 
 
 
