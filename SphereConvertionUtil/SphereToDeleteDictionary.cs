@@ -98,6 +98,12 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_pv_wyvern");
                                                                                                                 
             DeleteList.Add("i_mem_pv_balrog");
+                                                                                                                            
+            DeleteList.Add("i_mem_pv_bazlok");
+                                                                                                                            
+            DeleteList.Add("i_mem_pv_bazlok");
+                                                                                                                            
+            DeleteList.Add("i_mem_pv_archeore");
                                                                                                 
             DeleteList.Add("i_travel_timer");
 
@@ -232,14 +238,6 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_targ_lancerhache");
             DeleteList.Add("i_mem_lancerhache"); 
             DeleteList.Add("i_shieldbash");
-
-
-
-
-
-
-
-
 
 
 
