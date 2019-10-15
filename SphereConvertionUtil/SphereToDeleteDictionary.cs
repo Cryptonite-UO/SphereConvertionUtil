@@ -101,10 +101,12 @@ namespace SphereConvertionUtil
                                                                                                                             
             DeleteList.Add("i_mem_pv_bazlok");
                                                                                                                             
-            DeleteList.Add("i_mem_pv_bazlok");
+            DeleteList.Add("i_mem_pv_golem_cryptonite");
                                                                                                                             
             DeleteList.Add("i_mem_pv_archeore");
-                                                                                                
+            
+            DeleteList.Add("i_mem_pv_dracoliche");                                                                                             
+            
             DeleteList.Add("i_travel_timer");
 
             DeleteList.Add("i_targ_bouclier_protecteur");
