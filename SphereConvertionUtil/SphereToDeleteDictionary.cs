@@ -239,8 +239,9 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("i_targ_lancerhache");
             DeleteList.Add("i_mem_lancerhache"); 
-            DeleteList.Add("i_shieldbash");
-
+            DeleteList.Add("i_shieldbash"); 
+            DeleteList.Add("i_mem_toucher_mortel");
+            DeleteList.Add("i_scroll_summon_undead");
 
 
 
