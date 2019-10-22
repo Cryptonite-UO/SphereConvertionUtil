@@ -242,7 +242,17 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_shieldbash"); 
             DeleteList.Add("i_mem_toucher_mortel");
             DeleteList.Add("i_scroll_summon_undead");
-
+          
+            DeleteList.Add("i_reveal");
+            DeleteList.Add("i_crystal_spell");
+            DeleteList.Add("i_targ_customspell");
+            DeleteList.Add("i_mem_customspellflamestrike");
+            DeleteList.Add("i_mem_customspellexplosion");
+            DeleteList.Add("i_mem_customspellfireball");
+            DeleteList.Add("i_mem_customspelllightning");
+            DeleteList.Add("i_mem_customspellenergybolt");
+            DeleteList.Add("i_mem_customspellharm");
+            DeleteList.Add("i_mem_customspellmindblast");
 
 
             return DeleteList;
