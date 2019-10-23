@@ -159,8 +159,6 @@ namespace SphereConvertionUtil
 
             DeleteList.Add("I_M_BEAR_S");
 
-            DeleteList.Add("I_M_BEAR_S");
-
             DeleteList.Add("i_targ_bouclierterre");
 
             DeleteList.Add("i_staff_quest_attribue");
@@ -192,7 +190,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_spawn_chimere");
 
             DeleteList.Add("i_mem_customspellfireballartificier");
-            
+                        
+            DeleteList.Add("i_detecteur_rp"); //Il existe encore sur 56D mais il est différent. Je veux le deleter.
             DeleteList.Add("i_targ_BLOCK_RP");
             DeleteList.Add("i_targ_animateur_RP");
             DeleteList.Add("i_targ_analyse_cote_RP");
