@@ -11,27 +11,10 @@ namespace SphereConvertionUtil
         public static Dictionary<string, string> Init()
         {
                                                                                                                                                                                                                                                                                                                                                                         
-            //Items.Add("i_HAIR_DYEs", ""); ////////A faire
-            //Items.Add("i_decorative_armor_d", ""); ////////A faire
-            //Items.Add("i_hair_NONE", ""); ////////A faire
-            //Items.Add("i_beard_NONE", ""); ////////A faire
-            //Items.Add("i_treas_spawn_hard", ""); ////////A faire Carte au tresor
-            //Items.Add("i_treas_spawn_veasy", ""); ////////A faire Carte au tresor
-            //Items.Add("i_draco_life", ""); ////////A faire
-            //Items.Add("i_stone_choice", ""); ////////A faire
-            //Items.Add("i_changement_race_Orc", ""); ////////A faire
-            //Items.Add("i_BARDING_HORSE_2", ""); ////////A faire
-            //Items.Add("i_multi_house_wheat_cottage", ""); ////////A faire
-            //Items.Add("I_M_BEAR_Aventurier", ""); ////////A faire
-            //Items.Add("i_new_dance_horse", ""); ////////A faire
-            //Items.Add("i_staff_exp", ""); ////////A faire
-            //Items.Add("i_pierre_log", ""); ////////A faire
-            //Items.Add("i_staff_quest_attribue", ""); ////////A faire
-            //Items.Add("i_et_ed", ""); ////////A faire 'i_et_el, i_et_eo, i_et_eh
-            //Items.Add("i_spawn_chimere", ""); ////////A faire
+
             
             
-                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                        
             Items.Add("i_vise", "019f4");
             
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
@@ -294,7 +277,14 @@ namespace SphereConvertionUtil
             Items.Add("i_map_STOCK_27", "i_map_city");
             Items.Add("i_map_STOCK_28", "i_map_world");
             /////////FIN MAP////////////////
-
+            
+            Items.Add("i_archery_butte2", "0100b");
+            Items.Add("i_decorative_armor_2", "i_decorative_armor");
+            Items.Add("i_BARDING_HORSE_2", "01378");
+            Items.Add("i_decorative_shield_13_sword_under_ne", "i_decorative_shield_and_sword_3");
+            Items.Add("i_skeleton_hang2", "i_skeleton_broken");
+            Items.Add("i_KEG_WOOD_2", "i_KEG_WOOD_CONTAINER");
+            Items.Add("i_pickpocket_dip_n", "i_pickpocket_dip");
 
             return Items;
         }

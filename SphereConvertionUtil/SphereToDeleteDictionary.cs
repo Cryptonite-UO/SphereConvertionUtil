@@ -241,8 +241,10 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_shieldbash"); 
             DeleteList.Add("i_mem_toucher_mortel");
             DeleteList.Add("i_scroll_summon_undead");
-          
+            DeleteList.Add("i_regenerateur");
+
             DeleteList.Add("i_reveal");
+            DeleteList.Add("i_reveal_memory")
             DeleteList.Add("i_crystal_spell");
             DeleteList.Add("i_targ_customspell");
             DeleteList.Add("i_mem_customspellflamestrike");
@@ -253,6 +255,22 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_customspellharm");
             DeleteList.Add("i_mem_customspellmindblast");
 
+            DeleteList.Add("i_enlever_peacemaking");
+            DeleteList.Add("i_apprenti_sauf");
+            DeleteList.Add("testprison");
+            DeleteList.Add("testprison");
+            DeleteList.Add("i_et_eb");
+            DeleteList.Add("i_et_eh");
+            DeleteList.Add("i_et_el");
+            DeleteList.Add("i_et_eo");
+            DeleteList.Add("i_mana_lost");
+            DeleteList.Add("i_parchemin_magique");
+            DeleteList.Add("i_treas_spawn_easy");
+            DeleteList.Add("i_treas_spawn_veasy");
+            DeleteList.Add("i_treas_spawn_hard");
+            DeleteList.Add("i_treas_spawn_avg");
+            DeleteList.Add("i_hair_NONE");
+            DeleteList.Add("i_beard_NONE");
 
             return DeleteList;
         }
