@@ -244,7 +244,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_regenerateur");
 
             DeleteList.Add("i_reveal");
-            DeleteList.Add("i_reveal_memory")
+            DeleteList.Add("i_reveal_memory");
             DeleteList.Add("i_crystal_spell");
             DeleteList.Add("i_targ_customspell");
             DeleteList.Add("i_mem_customspellflamestrike");
