@@ -271,6 +271,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_treas_spawn_avg");
             DeleteList.Add("i_hair_NONE");
             DeleteList.Add("i_beard_NONE");
+            DeleteList.Add("i_chaosbook");
 
             return DeleteList;
         }
