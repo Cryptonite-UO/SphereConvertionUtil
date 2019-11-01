@@ -98,6 +98,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_pv_wyvern");
                                                                                                                 
             DeleteList.Add("i_mem_pv_balrog");
+                
+            DeleteList.Add("i_mem_pv_balrog_ancien");
                                                                                                                             
             DeleteList.Add("i_mem_pv_bazlok");
                                                                                                                             
