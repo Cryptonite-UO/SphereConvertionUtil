@@ -9,25 +9,6 @@ namespace SphereConvertionUtil
 
         public static Dictionary<string, string> Init()
         {
-            Houses.Add("i_terrain_10x16", "");
-
-            Houses.Add("i_terrain_8x16", "");
-
-            Houses.Add("i_terrain_16x12", "");
-
-            Houses.Add("i_terrain_24x17", "");
-
-            Houses.Add("i_terrain_20x20", "");
-
-            Houses.Add("i_terrain_31x31", "");
-
-            Houses.Add("i_terrain_24x24", "");
-
-            Houses.Add("i_terrain_11x11", "");
-
-            Houses.Add("i_terrain_14x14", "");
-
-            Houses.Add("i_terrain_7x7", "");
 
             //04064
             Houses.Add("i_multi_house_stone_plaster_small", "m_stone_and_plaster_house");

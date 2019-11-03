@@ -277,6 +277,17 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_beard_NONE");
             DeleteList.Add("i_chaosbook");
 
+            DeleteList.Add("i_terrain_10x16");
+            DeleteList.Add("i_terrain_8x16");
+            DeleteList.Add("i_terrain_16x12");
+            DeleteList.Add("i_terrain_24x17");
+            DeleteList.Add("i_terrain_20x20");
+            DeleteList.Add("i_terrain_31x31");
+            DeleteList.Add("i_terrain_24x24");
+            DeleteList.Add("i_terrain_11x11");
+            DeleteList.Add("i_terrain_14x14");
+            DeleteList.Add("i_terrain_7x7");
+
             return DeleteList;
         }
     }

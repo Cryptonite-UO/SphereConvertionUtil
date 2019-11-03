@@ -440,7 +440,7 @@ namespace SphereConvertionUtil
 
                         if (prop[1] == "t_sign_gump")
                         {
-                            signpost.Props[c][1] = "t_script";
+                            signpost.Props[c][1] = "t_normal";
                         }
                         items.Remove(signpost);
                         c++;
