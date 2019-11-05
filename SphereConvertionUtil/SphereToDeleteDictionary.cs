@@ -288,6 +288,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_terrain_14x14");
             DeleteList.Add("i_terrain_7x7");
 
+            DeleteList.Add("i_mercenaire_sauf");
+
             return DeleteList;
         }
     }
