@@ -192,8 +192,6 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_spawn_chimere");
 
             DeleteList.Add("i_mem_customspellfireballartificier");
-                
-            DeleteList.Add("i_mercenaire_sauf");
                         
             DeleteList.Add("i_detecteur_rp"); //Il existe encore sur 56D mais il est différent. Je veux le deleter.
             DeleteList.Add("i_targ_BLOCK_RP");
@@ -289,6 +287,23 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_terrain_7x7");
 
             DeleteList.Add("i_mercenaire_sauf");
+            
+            DeleteList.Add("i_memory_quete_despise1");
+            DeleteList.Add("i_memory_quete_despise2");
+            DeleteList.Add("i_memory_quete_despise3");
+            DeleteList.Add("i_memory_quete8");
+            DeleteList.Add("i_memory_quete2");
+            DeleteList.Add("i_memory_QUETE_hythloth3");
+            DeleteList.Add("i_memory_quete_delerium1");
+            DeleteList.Add("i_memory_quete12");
+            DeleteList.Add("i_memory_quete9");
+            DeleteList.Add("i_memory_quete_fire1");
+            DeleteList.Add("i_memory_quete_fire2");
+            DeleteList.Add("i_memory_quete_fire3");
+            DeleteList.Add("i_memory_quete_destard1");
+            DeleteList.Add("i_memory_destard2");
+            DeleteList.Add("i_memory_destard3");
+            
 
             return DeleteList;
         }
