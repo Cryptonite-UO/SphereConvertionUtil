@@ -305,6 +305,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_memory_destard3");
             DeleteList.Add("i_memory_quete5");
             DeleteList.Add("i_memory_quete6");
+            DeleteList.Add("i_memory_quete_newbie2");
             
 
             return DeleteList;
