@@ -311,6 +311,21 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_memory_quete_deceit1");
             DeleteList.Add("i_memory_quete4");
             DeleteList.Add("i_memory_quete11");
+            DeleteList.Add("i_memory_quete_wrong4");
+            DeleteList.Add("i_memory_quete_wrong1");
+            DeleteList.Add("i_memory_quete_wrong2");
+            DeleteList.Add("i_memory_quete_mephitis1");
+            DeleteList.Add("i_memory_quete_mephitis2");
+            DeleteList.Add("i_memory_QUETE_mephitis3");
+            DeleteList.Add("i_memory_quete3");
+            DeleteList.Add("i_memory_QUETE_ice_dungeon1");
+            DeleteList.Add("i_memory_QUETE_ice_dungeon2");
+            DeleteList.Add("i_memory_QUETE_ice_dungeon3");
+            DeleteList.Add("i_memory_quete10");
+            DeleteList.Add("i_memory_quete_newbie6");
+            DeleteList.Add("i_memory_quete_newbie5");
+            DeleteList.Add("i_memory_quete7");
+            DeleteList.Add("i_memory_quete_newbie4");
             
 
             return DeleteList;
