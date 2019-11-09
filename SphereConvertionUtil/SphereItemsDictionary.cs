@@ -43,7 +43,9 @@ namespace SphereConvertionUtil
             
             Items.Add("i_decorative_armor_2", "i_decorative_armor");
                         
-            Items.Add("i_decorative_armor2_d", "i_decorative_armor2"); // le modele avec la hache a terre marche pas sur 56D DOnc hache ds les air
+            Items.Add("i_decorative_armor2_d", "i_trap_decorative_armor2_downpike");
+
+            Items.Add("i_decorative_armor_d", "i_trap_decorative_armor_downpike");
 
             Items.Add("i_bookcase_peter", "i_bookcase_ruined");
 
