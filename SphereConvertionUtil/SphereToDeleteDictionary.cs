@@ -328,7 +328,13 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_memory_quete_newbie4");
             DeleteList.Add("i_memory_quete_newbie3");
             DeleteList.Add("i_memory_quete_newbie8");
-            
+            DeleteList.Add("i_memory_quete_newbie1");
+            DeleteList.Add("i_memory_quete_newbie7");
+            DeleteList.Add("i_memory_quete_personnalise");
+            DeleteList.Add("i_mem_quete12_b");
+            DeleteList.Add("i_mem_pv_queteperso");
+            DeleteList.Add("i_mem_quete_fire2_c");
+           
 
             return DeleteList;
         }
