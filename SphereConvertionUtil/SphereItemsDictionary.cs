@@ -110,7 +110,7 @@ namespace SphereConvertionUtil
                                                                                                                                     
             Items.Add("i_table_bamboo_end", "i_table_bamboo");
                                                                                                                                     
-            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied");
+            Items.Add("i_pet_ostard_zostrich", "i_pet_ostard_frenzied_2");
             
             Items.Add("i_mt_ostard_zostrich", "i_mt_ostard_frenzied");
                                                                                                                                                 
