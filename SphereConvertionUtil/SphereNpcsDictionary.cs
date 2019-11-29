@@ -78,9 +78,9 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_elem_earth", "c_elemental_earth");
 
-            Npcs.Add("c_h_warrior_f", "c_savage_warrior_female");
+            Npcs.Add("c_h_warrior_f", "c_guard_f");
 
-            Npcs.Add("c_h_warrior", "c_savage_warrior_male");
+            Npcs.Add("c_h_warrior", "c_guard");
 			
             Npcs.Add("c_m_exodus", "c_exodus_overseer");
 						
