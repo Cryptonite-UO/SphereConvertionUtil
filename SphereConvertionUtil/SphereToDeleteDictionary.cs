@@ -9,6 +9,7 @@ namespace SphereConvertionUtil
 
         public static List<string> Init()
         {            
+
             DeleteList.Add("i_pierre_depecage_dragon_small_red");
                         
             DeleteList.Add("i_pierre_depecage_dragon_small_black");
@@ -48,6 +49,14 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_orc_stone");
                                                 
             DeleteList.Add("i_demi_orc_stone");
+                                                
+            DeleteList.Add("i_demi_elfe_stone");
+                                                
+            DeleteList.Add("i_haut_elfe_stone");
+                                                
+            DeleteList.Add("i_nains_montagnes_stone");
+                                                
+            DeleteList.Add("i_gnomes_bois_stone");
 
             DeleteList.Add("i_lancerhache_memory");
 
