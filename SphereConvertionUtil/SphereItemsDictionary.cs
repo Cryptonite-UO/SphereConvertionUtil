@@ -11,10 +11,6 @@ namespace SphereConvertionUtil
         public static Dictionary<string, string> Init()
         {
                                                                                                                                                                                                                                                                                                                                                                         
-
-            
-            
-                                                                                                                                                                                                                                                                                                                                                                                                        
             Items.Add("i_vise", "019f4");
             
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
@@ -239,16 +235,7 @@ namespace SphereConvertionUtil
             Items.Add("i_forge_2_part_3_of_3_s_4", "0199a"); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", "0199e"); // Ajout au defname marche pas
             ////////////////////////////////FIN FORGE//////////////////////////////////    
-            
-                        ////////Pierre de race/////
-            Items.Add("i_demi_elfe_stone", "i_stone_race_demielfe");
-            Items.Add("i_humain_akaran_stone", "i_stone_race_humain");
-            Items.Add("i_haut_elfe_stone", "i_stone_race_elfe");
-            Items.Add("i_nains_montagnes_stone", "i_stone_race_nain");
-            Items.Add("i_gnomes_bois_stone", "i_stone_race_gnome");
-            /////////// FIN///////////
-            ///
-
+            Items.Add("i_humain_akaran_stone", "i_stone_race");
             ///////MAP///////
             Items.Add("i_map_STOCK_1", "i_map_city");
             Items.Add("i_map_STOCK_2", "i_map_city");
