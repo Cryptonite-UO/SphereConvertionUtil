@@ -276,6 +276,7 @@ namespace SphereConvertionUtil
 
             Items.Add("i_strong_box", "i_box_brass");
             Items.Add("i_dieux_stone", "i_pierre_dieux");
+            //Items.Add("i_tailor_stone", "NOUVELLE PIERRE MÉTIERS A VENIR");
 
             return Items;
         }
