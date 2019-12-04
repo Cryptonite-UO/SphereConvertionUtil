@@ -343,6 +343,14 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_quete12_b");
             DeleteList.Add("i_mem_pv_queteperso");
             DeleteList.Add("i_mem_quete_fire2_c");
+            
+            DeleteList.Add("i_charpentier_stone");
+            DeleteList.Add("i_forgeron_stone");
+            DeleteList.Add("i_alchimist_stone");
+            DeleteList.Add("i_scribe_stone");
+            DeleteList.Add("i_artisant_stone");
+            DeleteList.Add("i_bowyer_stone");
+            
            
 
             return DeleteList;
