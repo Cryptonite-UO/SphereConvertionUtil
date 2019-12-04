@@ -273,6 +273,7 @@ namespace SphereConvertionUtil
             Items.Add("i_skeleton_hang2", "i_skeleton_broken");
             Items.Add("i_KEG_WOOD_2", "i_KEG_WOOD_CONTAINER");
             Items.Add("i_pickpocket_dip_n", "i_pickpocket_dip");
+            Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");i_KEG_WOOD_2
 
             Items.Add("i_strong_box", "i_box_brass");
             Items.Add("i_dieux_stone", "i_pierre_dieux");
