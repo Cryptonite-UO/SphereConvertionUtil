@@ -352,7 +352,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_bowyer_stone");
             
             DeleteList.Add("i_deed_evil_compound"); //si qqn veut un refund il pagera
-            
+            DeleteList.Add("i_deed_thatched_roof_cottage"); //si qqn veut un refund il pagera
            
 
             return DeleteList;
