@@ -298,6 +298,67 @@ namespace SphereConvertionUtil
                             corection++;
                         }
                     }
+                    //fix archerybute2,decorative armor
+                    if (prop[0] == "DISPID")
+                    {
+                        if (prop[1] == "i_archery_butte2")
+                        {
+                            prop[1] = "0100b";
+                            corection++;
+                        }
+                        if (prop[1] == "i_decorative_armor_2")
+                        {
+                            prop[1] = "i_decorative_armor";
+                            corection++;
+                        }
+                        if (prop[1] == "i_pickpocket_dip_w")
+                        {
+                            prop[1] = "i_pickpocket_dip";
+                            corection++;
+                        }
+                        if (prop[1] == "i_skeleton_hang2")
+                        {
+                            prop[1] = "i_skeleton_hang";
+                            corection++;
+                        }
+                        if (prop[1] == "i_KEG_WOOD_2")
+                        {
+                            prop[1] = "i_KEG_WOOD";
+                            corection++;
+                        }
+                        if (prop[1] == "i_pet_daemon")
+                        {
+                            prop[1] = "i_pet_demon";
+                            corection++;
+                        }
+                        if (prop[1] == "i_decorative_armor2_2")
+                        {
+                            prop[1] = "i_decorative_armor2";
+                            corection++;
+                        }
+                        if (prop[1] == "i_pet_ostard_zostrich")
+                        {
+                            prop[1] = "i_pet_ostard_frenzied_2";
+                            corection++;
+                        }
+                    }
+
+                    //fix t_deed
+                    if (prop[0] == "TYPE")
+                    {
+                        if (prop[1] == "t_deed_locked")
+                        {
+                            prop[1] = "t_deed";
+                            corection++;
+                        }
+                        if (prop[1] == "t_secure")
+                        {
+                            prop[1] = "t_locked";
+                            corection++;
+                        }
+
+                    }
+
                     if (prop[0] == "MORE1" || prop[0] == "MORE2" || prop[0] == "OBODY" || prop[0] == "TYPE")
                     {
                         foreach (KeyValuePair<string, string> kvp in Houses)
@@ -358,7 +419,7 @@ namespace SphereConvertionUtil
 
             #endregion
 
-            Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de correction MORE1, MORE2, OBODY, TYPE et ACTION: {corection}");
+            Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss")} : Nombre de correction MORE1, MORE2, OBODY, TYPE, DISPID et ACTION: {corection}");
         }
 
         private static void ConvertHouse()
