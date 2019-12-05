@@ -351,6 +351,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_artisant_stone");
             DeleteList.Add("i_bowyer_stone");
             
+            DeleteList.Add("i_deed_evil_compound"); //si qqn veut un refund il pagera
+            
            
 
             return DeleteList;
