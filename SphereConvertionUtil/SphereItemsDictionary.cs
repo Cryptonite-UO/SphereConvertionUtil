@@ -270,14 +270,16 @@ namespace SphereConvertionUtil
             Items.Add("i_archery_butte2", "0100b");
             Items.Add("i_BARDING_HORSE_2", "01378");
             Items.Add("i_decorative_shield_13_sword_under_ne", "i_decorative_shield_and_sword_3");
+            Items.Add("i_decorative_shield_12_sword_over_ne", "i_decorative_shield_and_sword_2");
             Items.Add("i_skeleton_hang2", "i_skeleton_broken");
             Items.Add("i_KEG_WOOD_2", "i_KEG_WOOD_CONTAINER");
             Items.Add("i_pickpocket_dip_n", "i_pickpocket_dip");
-            Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");i_KEG_WOOD_2
+            Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");
 
             Items.Add("i_strong_box", "i_box_brass");
             Items.Add("i_dieux_stone", "i_pierre_dieux");
             Items.Add("i_tailor_stone", "i_stone_metier");
+            Items.Add("i_STAIRS_MARBLE_2", "070a");
 
             return Items;
         }
