@@ -356,7 +356,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_tile_soins_good7");
             DeleteList.Add(" i_multi_house_wheat_cottage");
             DeleteList.Add("i_targ_bouclierelectrique");
-            DeleteList.Add(" i_targ_grimoireshaman");
+            DeleteList.Add("i_targ_grimoireshaman");
+            DeleteList.Add("i_draco_life");
 
 
 
