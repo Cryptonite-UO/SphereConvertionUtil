@@ -316,6 +316,11 @@ namespace SphereConvertionUtil
                             prop[1] = "i_pickpocket_dip";
                             corection++;
                         }
+                        if (prop[1] == "i_pickpocket_dip_n")
+                        {
+                            prop[1] = "i_pickpocket_dip";
+                            corection++;
+                        }
                         if (prop[1] == "i_skeleton_hang2")
                         {
                             prop[1] = "i_skeleton_hang";
