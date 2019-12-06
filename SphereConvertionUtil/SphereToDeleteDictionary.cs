@@ -358,7 +358,8 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_targ_bouclierelectrique");
             DeleteList.Add("i_targ_grimoireshaman");
             DeleteList.Add("i_draco_life");
-
+            DeleteList.Add("i_deed_thatched_roof_cottage");
+            DeleteList.Add("i_deed_house_wheat_cottage");
 
 
 
