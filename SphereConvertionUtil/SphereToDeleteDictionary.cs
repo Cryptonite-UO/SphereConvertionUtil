@@ -354,7 +354,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_deed_evil_compound"); //si qqn veut un refund il pagera
             DeleteList.Add("i_deed_thatched_roof_cottage"); //si qqn veut un refund il pagera
             DeleteList.Add("i_tile_soins_good7");
-            DeleteList.Add(" i_multi_house_wheat_cottage");
+            DeleteList.Add("i_multi_house_wheat_cottage");
             DeleteList.Add("i_targ_bouclierelectrique");
             DeleteList.Add("i_targ_grimoireshaman");
             DeleteList.Add("i_draco_life");
