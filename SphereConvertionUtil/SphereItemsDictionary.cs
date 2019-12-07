@@ -277,7 +277,6 @@ namespace SphereConvertionUtil
             Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");
 
             Items.Add("i_strong_box", "i_box_brass");
-            Items.Add("i_dieux_stone", "i_pierre_dieux");
             Items.Add("i_tailor_stone", "i_stone_metier");
             Items.Add("i_STAIRS_MARBLE_2", "070a");
 
