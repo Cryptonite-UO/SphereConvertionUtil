@@ -360,6 +360,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_draco_life");
             DeleteList.Add("i_deed_thatched_roof_cottage");
             DeleteList.Add("i_deed_house_wheat_cottage");
+            DeleteList.Add("i_dieux_stone");
 
 
 
