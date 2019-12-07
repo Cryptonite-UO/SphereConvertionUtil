@@ -235,8 +235,7 @@ namespace SphereConvertionUtil
             Items.Add("i_forge_2_part_3_of_3_s_4", "0199a"); // Ajout au defname marche pas
             Items.Add("i_FORGE_BELLOWS_2_part_1_of_3_e_3", "0199e"); // Ajout au defname marche pas
             ////////////////////////////////FIN FORGE//////////////////////////////////    
-            Items.Add("i_humain_akaran_stone", "i_stone_race");
-            ///////MAP///////
+                       ///////MAP///////
             Items.Add("i_map_STOCK_1", "i_map_city");
             Items.Add("i_map_STOCK_2", "i_map_city");
             Items.Add("i_map_STOCK_3", "i_map_city");
@@ -277,7 +276,8 @@ namespace SphereConvertionUtil
             Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");
 
             Items.Add("i_strong_box", "i_box_brass");
-            Items.Add("i_tailor_stone", "i_stone_metier");
+            //Items.Add("i_humain_akaran_stone", "i_stone_race");
+            //Items.Add("i_tailor_stone", "i_stone_metier");
             Items.Add("i_STAIRS_MARBLE_2", "070a");
 
             return Items;
