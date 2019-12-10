@@ -356,11 +356,6 @@ namespace SphereConvertionUtil
                             prop[1] = "t_deed";
                             corection++;
                         }
-                        if (prop[1] == "t_secure")
-                        {
-                            prop[1] = "t_locked";
-                            corection++;
-                        }
 
                     }
 
