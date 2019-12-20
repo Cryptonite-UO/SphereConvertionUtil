@@ -362,8 +362,9 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_deed_house_wheat_cottage");
             DeleteList.Add("i_dieux_stone");
             DeleteList.Add("i_humain_akaran_stone");
-            DeleteList.Add("i_tailor_stone");
-
+            DeleteList.Add("i_tailor_stone");  
+            DeleteList.Add("i_mem_customspellexplosionartificier");
+            DeleteList.Add("i_targ_customspellartificier");
 
             return DeleteList;
         }
