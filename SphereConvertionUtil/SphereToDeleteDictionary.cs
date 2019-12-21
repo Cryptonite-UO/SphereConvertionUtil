@@ -365,6 +365,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_tailor_stone");  
             DeleteList.Add("i_mem_customspellexplosionartificier");
             DeleteList.Add("i_targ_customspellartificier");
+            DeleteList.Add("i_karmafame_stone"); //plus besoin avec la charsheet
 
             return DeleteList;
         }
