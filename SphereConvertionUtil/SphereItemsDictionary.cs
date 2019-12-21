@@ -276,9 +276,11 @@ namespace SphereConvertionUtil
             Items.Add("i_pickpocket_dip_w", "i_pickpocket_dip");
 
             Items.Add("i_strong_box", "i_box_brass");
-            //Items.Add("i_humain_akaran_stone", "i_stone_race");
-            //Items.Add("i_tailor_stone", "i_stone_metier");
             Items.Add("i_STAIRS_MARBLE_2", "070a");
+            Items.Add("i_ecail_dragon_b", "i_dragonscale_white");
+            Items.Add("i_ecail_dragon", "i_dragonscale_red");
+            Items.Add("i_ecail_dragon_v", "i_dragonscale_green");
+            Items.Add("i_ecail_dragon_n", "i_dragonscale_black");
 
             return Items;
         }
