@@ -366,7 +366,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_mem_customspellexplosionartificier");
             DeleteList.Add("i_targ_customspellartificier");
             DeleteList.Add("i_karmafame_stone"); //plus besoin avec la charsheet
-            DeliteList.Add("i_memory_feu_golog"); //Item qui stackait sans remove sur les joueurs
+            DeleteList.Add("i_memory_feu_golog"); //Item qui stackait sans remove sur les joueurs
 
             return DeleteList;
         }
