@@ -368,6 +368,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_karmafame_stone"); //plus besoin avec la charsheet
             DeleteList.Add("i_memory_feu_golog"); //Item qui stackait sans remove sur les joueurs
             DeleteList.Add("i_targ_depecage")
+            DeleteList.Add("i_ante_lifestream")
 
             return DeleteList;
         }
