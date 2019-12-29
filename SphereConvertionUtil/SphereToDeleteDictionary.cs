@@ -369,7 +369,29 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_memory_feu_golog"); //Item qui stackait sans remove sur les joueurs
             DeleteList.Add("i_targ_depecage")
             DeleteList.Add("i_ante_lifestream")
-
+            DeleteList.Add("i_guerrierpoly_stone")
+            DeleteList.Add("i_artificier_stone")
+            DeleteList.Add("i_assassin_stone")
+            DeleteList.Add("i_aventurier_stone")
+            DeleteList.Add("i_barde_stone")
+            DeleteList.Add("i_bourreau_stone")
+            DeleteList.Add("i_cavalier_stone")
+            DeleteList.Add("i_chantelame_stone")
+            DeleteList.Add("i_chevalier_stone")
+            DeleteList.Add("i_chevaliernoir_stone")
+            DeleteList.Add("i_druide_stone")
+            DeleteList.Add("i_lancer_stone")
+            DeleteList.Add("i_mage_stone")
+            DeleteList.Add("i_Moine_stone")
+            DeleteList.Add("i_moucheur_stone")
+            DeleteList.Add("i_necro_stone")
+            DeleteList.Add("i_paladin_stone")
+            DeleteList.Add("i_palnoir_stone")
+            DeleteList.Add("i_pourfendeur_stone")
+            DeleteList.Add("i_protecteur_stone")
+            DeleteList.Add("i_ranger_stone")   
+            DeleteList.Add("i_shaman_stone")
+            DeleteList.Add("i_voleur_stone")
             return DeleteList;
         }
     }
