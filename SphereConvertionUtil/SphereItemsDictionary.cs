@@ -281,6 +281,7 @@ namespace SphereConvertionUtil
             Items.Add("i_ecail_dragon", "i_dragonscale_red");
             Items.Add("i_ecail_dragon_v", "i_dragonscale_green");
             Items.Add("i_ecail_dragon_n", "i_dragonscale_black");
+            Items.Add("i_pretre_stone", "i_stone_classe");
 
             return Items;
         }
