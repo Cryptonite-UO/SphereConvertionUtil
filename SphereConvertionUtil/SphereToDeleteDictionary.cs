@@ -392,6 +392,7 @@ namespace SphereConvertionUtil
             DeleteList.Add("i_ranger_stone")   
             DeleteList.Add("i_shaman_stone")
             DeleteList.Add("i_voleur_stone")
+            DeleteList.Add("i_pierre_reset_titre")
             return DeleteList;
         }
     }
