@@ -21,7 +21,7 @@ namespace SphereConvertionUtil
         private static readonly ConsoleSpiner spin = new ConsoleSpiner();
         private static string Headers = "";
 
-        private static bool ShowDupe = false;
+        private static bool ShowDupe = true;
 
         private static int goldAmount = 0;
 
@@ -59,7 +59,7 @@ namespace SphereConvertionUtil
 
         private static void AskFilePath(string fileName)
         {
-            Console.WriteLine($"Spécifiez le chemin complet vers le {fileName} de 55i");
+            Console.WriteLine($"Spécifiez le che+min complet vers le {fileName} de 55i");
             Console.Write("Chemin : ");
             file = Console.ReadLine();
         }

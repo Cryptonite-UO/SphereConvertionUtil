@@ -10,9 +10,80 @@ namespace SphereConvertionUtil
 
         public static Dictionary<string, string> Init()
         {
-                                                                                                                                                                                                                                                                                                                                                                        
+            Items.Add("i_fruit_gourd2", "i_fruit_gourd_green");
+            Items.Add("i_hair_krisna", "i_hair_topknot");
+            Items.Add("i_candleabra2_lit", "i_candelabra2_lit");
+            Items.Add("i_candleabra2", "i_candelabra2");
+            Items.Add("i_candleabra", "i_candelabra");
+            Items.Add("i_pet_bonedaemon", "i_pet_daemon_bone");
+            Items.Add("i_hair_afro", "i_hair_curly");
+            Items.Add("i_marble", "i_rock_marble");
+            Items.Add("i_pet_dreadspider", "i_pet_spider_dread");
+            Items.Add("i_pet_fireant_warrior", "i_pet_solen_warrior");
+            Items.Add("i_pet_fireant_queen", "i_pet_solen_queen");
+            Items.Add("i_daemon_skull", "i_skull_demon");
+            Items.Add("i_pet_hordedaemon", "i_pet_daemon_horde");
+            Items.Add("i_pet_ravlion", "i_pet_lion");//???je sais pas c quoi mis qqch a la botche
+            Items.Add("i_horseman_bow", "i_bow_horseman");
+            Items.Add("i_pet_fourarmed_daemon", "i_pet_daemon");
+            Items.Add("i_pet_demon", "i_pet_daemon");
+            Items.Add("i_double_blade", "i_axe_double");
+            Items.Add("i_rock_plain_x", "i_rock_plain");
+            Items.Add("i_fruit_gourd1", "i_fruit_gourd_yellow");
+            Items.Add("i_pet_droppelganger", "i_pet_doppleganger");
+            Items.Add("i_pet_runebeetle", "i_pet_beetle_rune");
+            Items.Add("i_fruit_cantelope", "i_fruit_cantaloupe");
+            Items.Add("i_reag_serpent_scale", "i_reag_nox_crystal");
+            Items.Add("i_chest_treasure", "i_chest_metal");//?????
+            Items.Add("i_wall_marble_1", "i_wall_whitemarble");
+            Items.Add("i_pet_mutantwyvern", "i_pet_wyvern");
+            Items.Add("i_coconut_unpeeled", "i_coconut_open");
+            Items.Add("i_pet_juggernaught", "i_pet_juggernaut");
+            Items.Add("i_candleabra_lit", "i_candelabra_lit");
+            Items.Add("i_pet_arcanedaemon", "i_pet_daemon_arcane");
+            Items.Add("i_pet_crystalelemental", "i_pet_elem_crystal");
+            Items.Add("i_bed_1", "i_bed_small_unmade");
+            Items.Add("i_bed_23", "0a7b");
+            Items.Add("i_bed_22", "0a7b");
+            Items.Add("i_bed_28", "0a80");
+            Items.Add("i_bed_29", "0a81");
+            Items.Add("i_bed_30", "i_bed_large_sheet");
+
+            Items.Add("i_pot_dirty_2", "i_pot_dirty");
+            Items.Add("i_wall_carving_stone", "i_wall_carving");
+            Items.Add("i_bed_9", "0a69");
+            Items.Add("i_bed_11", "0a6b");
+            Items.Add("i_cot_sw", "i_cot");
+            Items.Add("i_TREE_SAPLING_PLANTED", "i_tree_sapling");
+            Items.Add("i_pet_meerwarrior", "i_pet_meer_warrior");
+            Items.Add("i_wall_stone_4", "i_wall_largebrick");
+            Items.Add("i_multi_altar", "m_altar");
+            Items.Add("i_gate_wood_2", "i_fence_wood_3");
+            Items.Add("i_bench_woodworker_ext", "i_bench_woodworker");
+            Items.Add("i_map", "i_map_blank");
+            Items.Add("i_pet_chaosdaemon", "i_pet_daemon_chaos");
+            Items.Add("i_DOOR_PORTCULIS", "i_door_portcullis");
+            Items.Add("i_axel_and_gears", "i_axle_and_gears");
+            Items.Add("i_wall_brick", "i_wall_smallbrick");
+            Items.Add("i_wall_wood_2", "i_wall_lightwood");
+            Items.Add("i_pet_tsukiwolf", "i_pet_wolf_tsuki");
+            Items.Add("i_boulder_X", "i_boulder");
+            Items.Add("i_horn_dreadHorn", "i_horn_dread_horn");
+            Items.Add("i_goat_skinned_2", "i_goat_skinned");
+            Items.Add("i_wall_stone_7", "i_wall_hugebrick");
+            Items.Add("i_wall_stone_8", "i_wall_hugestone");
+            Items.Add("i_WALL_WOOD", "i_wall_darkwood");
+            Items.Add("i_wall_stone_2", "i_wall_stone_window");
+            Items.Add("i_wall_sandstone_6", "i_wall_cave");
+            Items.Add("i_wall_stone_9", "i_wall_hugebrownstone");
+            Items.Add("i_PYLON_STONE_SAND", "");
+            Items.Add("i_composite_bow", "i_bow_composite");
+            Items.Add("i_pet_irongolem", "i_pet_golem_iron");
+            Items.Add("i_sheet_2", "i_sheet");
+
+
             Items.Add("i_vise", "019f4");
-            
+
             Items.Add("i_wall_carving_stone_2", "i_wall_carving_3");
             
             Items.Add("i_wall_carving_stone_4", "i_wall_carving_7");
@@ -76,8 +147,6 @@ namespace SphereConvertionUtil
             Items.Add("i_table_wood_solid_custom_corner_ew", "0b6f");
             Items.Add("i_table_board_rough_custom_corner_ew", "0b8a");
             Items.Add("i_table_board_rough_ext", "0b8d");
-                                                                        
-            Items.Add("i_pet_daemon", "i_pet_demon");
                                                                                                                                                             
             Items.Add("i_pegbaord", "i_pegboard");
                                                                                                 
@@ -95,7 +164,8 @@ namespace SphereConvertionUtil
             Items.Add("i_bed_24", "0a7c");
             Items.Add("i_bed_26", "0a7e");
             Items.Add("i_bed_27", "0a7f");
-                                                                                                                        
+            Items.Add("i_bed_31", "0db0");
+
             Items.Add("i_tapestry_5_w", "0fdb");
                                                                                                                                     
             Items.Add("i_tapestry_7_w", "0fe3");
@@ -156,8 +226,20 @@ namespace SphereConvertionUtil
                                                                                                                                                                                                 
             Items.Add("i_decorative_shield_13_sword_under_nw", "01637");
                                                                                                                                                                                                 
-            Items.Add("i_treas_map_rolled_1", "i_ttm_l1_2"); // remplacé par une carte au trésor normal
-                                                                                                                                                                                                            
+            Items.Add("i_treas_map_rolled_1", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_29", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_17", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_24", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l4_9", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_16", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_6", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l1_0", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l4_23", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_8", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l2_15", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_23", "i_ttm_l3"); // remplacé par une carte au trésor normal
+            Items.Add("i_ttm_l3_9", "i_ttm_l3"); // remplacé par une carte au trésor normal
+
             Items.Add("i_portrait_7", "0ee7");
                                                                                                                                                                                                                         
             Items.Add("i_wall_wood_7", "i_wall_palisade");

@@ -10,6 +10,60 @@ namespace SphereConvertionUtil
         public static Dictionary<string,string> Init()
         {
             //"ID55I, ID556D"
+            Npcs.Add("C_H_INNKEEPER_F", "C_INNKEEPER_F");
+            Npcs.Add("C_H_MAGESHOP_F", "C_MAGESHOP_F");
+            Npcs.Add("c_m_frost_troll", "c_frost_troll");
+            Npcs.Add("C_H_BAKER_F", "C_BAKER_F");
+            Npcs.Add("c_m_scorpion_thrall", "c_scorpion_thrall");
+            Npcs.Add("c_m_scorpion_prince", "c_scorpion_prince");
+            Npcs.Add("c_m_orc_mage", "c_orc_shaman");
+            Npcs.Add("c_m_mummy", "c_mummy");
+            Npcs.Add("c_m_terathan_avenger", "c_terathan_avenger");
+            Npcs.Add("c_m_orc_captain", "c_orc_captain");
+            Npcs.Add("c_m_elem_snow", "c_elemental_snow");
+            Npcs.Add("c_m_ghoul", "c_ghoul");
+            Npcs.Add("c_m_gazer_elder", "c_gazer_elder");
+            Npcs.Add("c_m_scorpion_king", "c_scorpion_king");
+            Npcs.Add("c_h_dreadlord_captain", "c_dreadlord_captain");
+            Npcs.Add("c_h_frostelf_shaman", "c_frostelf_shaman");
+            Npcs.Add("c_h_dreadlord", "c_dreadlord");
+            Npcs.Add("c_h_frostelf_archer", "c_frostelf_archer");
+            Npcs.Add("c_h_witch", "c_witch");
+            Npcs.Add("c_h_warlock", "c_warlock");
+            Npcs.Add("c_m_ogre_lord", "c_ogre_lord");
+            Npcs.Add("c_m_skeleton_knight", "c_skeleton_knight");
+            Npcs.Add("c_m_skeletonarcher", "c_skeletonarcher");
+            Npcs.Add("c_dragon_green", "c_dragon_red");
+            Npcs.Add("c_fire_ant_warrior", "c_solen_warrior");
+            Npcs.Add("c_fire_ant_queen", "c_solen_queen");
+            Npcs.Add("c_destroyer_gargoyle", "c_gargoyle_destroyer");
+            Npcs.Add("c_horde_minion", "c_daemon_horde_minion");
+            Npcs.Add("i_pet_hordedaemon", "i_pet_daemon_horde");
+            Npcs.Add("c_demon_balron", "c_daemon_balron");
+            Npcs.Add("c_fourarmed_daemon", "c_daemon");//????????
+            Npcs.Add("c_Horde_Daemon_Large", "c_daemon_horde_large");
+            Npcs.Add("c_wyvern_mutant", "c_wyvern");
+            Npcs.Add("c_dragon_black", "c_dragon_blackdrake");
+            Npcs.Add("c_abyss_lord", "c_abyssal_infernal");
+            Npcs.Add("c_Doppelganger", "c_Doppleganger");
+            Npcs.Add("c_swarm", "c_gazer_larva");
+            Npcs.Add("c_demon_blackgate", "c_daemon_balron");
+            Npcs.Add("c_darkelf_war_sword", "c_darkelf_fight_sword");
+            Npcs.Add("c_arcane_daemon", "c_daemon_arcane");
+            Npcs.Add("c_goat_mountain", "c_mountain_goat");
+            Npcs.Add("c_WAITRESS", "c_waiter_f");
+            Npcs.Add("c_chaos_daemon", "c_daemon_chaos");
+            Npcs.Add("c_Horde_Daemon_Medium", "c_daemon_horde_large");
+            Npcs.Add("c_fire_ant_worker", "c_solen_worker");
+            Npcs.Add("c_lady_m", "c_lady_melisande");
+            Npcs.Add("c_woodelf_ranger", "c_woodelf_archer");
+            Npcs.Add("c_fire_gargoyle", "c_gargoyle_fire");
+            Npcs.Add("c_multicolored_horde_minion", "c_demon_horde_colored");
+            Npcs.Add("c_ice_hound", "c_hellhound");
+
+            Npcs.Add("c_h_barbarian_warrior", "c_barbarian_warrior");
+
+
             Npcs.Add("c_a_black_bear", "c_bear_black");
 
             Npcs.Add("c_m_bear", "c_bear_brown");
@@ -34,7 +88,8 @@ namespace SphereConvertionUtil
 
             Npcs.Add("c_m_goblin", "c_goblin_gray");
 
-            Npcs.Add("c_m_goblin_mage", "c_goblin_gray_mage");
+            Npcs.Add("c_m_goblin_mage", "c_goblin_shaman");
+
 
             Npcs.Add("c_m_lava_serpent", "c_serpent_lava");
 
@@ -50,19 +105,17 @@ namespace SphereConvertionUtil
 
             //Npcs.Add("c_m_treant", "c_reaper_redux");//Remplacé par un nouveau
 
-            Npcs.Add("c_m_icefiend", "c_demon_ice");
+            Npcs.Add("c_m_icefiend", "c_daemon_ice");
 
             Npcs.Add("c_dragon_small_red", "c_dragon_red");
 
-            Npcs.Add("c_dragon_small_black", "c_dragon_black");
+            Npcs.Add("c_dragon_small_black", "c_dragon_blackdrake");
 		
             Npcs.Add("c_white_wyrm", "c_wyrm_white");
 
             Npcs.Add("c_h_sprte_mage", "c_sprite_mage");
 
             Npcs.Add("c_elem_water", "c_elemental_water");
-
-            Npcs.Add("c_m_elem_snow", "c_elemental_snow");
 
             Npcs.Add("c_elem_air", "c_elemental_air");
 
@@ -105,14 +158,14 @@ namespace SphereConvertionUtil
             Npcs.Add("c_m_frostspider", "c_spider_frost");
 								
             Npcs.Add("c_a_mountain_goat", "c_goat_mountain");
-											
-            Npcs.Add("c_daemon", "c_demon");
-														
-            Npcs.Add("c_daemon_w_sword", "c_demon_blackgate");//Pas trouvé avec une épé...
+
+            Npcs.Add("c_dread_spider", "c_spider_dread");
+
+            Npcs.Add("c_daemon_w_sword", "c_daemon_balron");//Pas trouvé avec une épé...
 													
-            Npcs.Add("c_m_balron", "c_demon_balron");
+            Npcs.Add("c_m_balron", "c_daemon_balron");
 													
-            Npcs.Add("c_m_balrog", "c_demon_blackgate"); //Pas trouvé avec une épée...
+            Npcs.Add("c_m_balrog", "c_daemon_balron"); //Pas trouvé avec une épée...
 
             Npcs.Add("c_m_snow_daemon", "c_demon_ice");//remplacé par un semblable
 			
@@ -120,7 +173,7 @@ namespace SphereConvertionUtil
 			
             Npcs.Add("C_H_BARBER", "c_hairstylist_f"); //Ya aussi le gars mais les coiffeuses c des femmes :-)
 					
-            Npcs.Add("C_H_FIGHT_OVERSEER", "C_FIGHT_OVERSEER");
+            Npcs.Add("C_H_FIGHT_OVERSEER", "c_exodus_overseer");
 					
             Npcs.Add("C_H_EVILMAGE_F", "C_EVILMAGE");
 					
